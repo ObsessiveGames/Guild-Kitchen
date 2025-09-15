@@ -4581,9 +4581,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &687818249 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 7167546179887638864, guid: aaf80b44acca8ac43815e36b53e6f153,
+  m_CorrespondingSourceObject: {fileID: 4901866450690434471, guid: 5ad70540b3b898b4d904baeaa2bad212,
     type: 3}
-  m_PrefabInstance: {fileID: 1271014160}
+  m_PrefabInstance: {fileID: 2336308584095927058}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &687896324
 GameObject:
@@ -8062,79 +8062,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1265811053}
   m_CullTransparentMesh: 1
---- !u!1001 &1271014160
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 981715798}
-    m_Modifications:
-    - target: {fileID: 7167546179887638864, guid: aaf80b44acca8ac43815e36b53e6f153,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7167546179887638864, guid: aaf80b44acca8ac43815e36b53e6f153,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 7167546179887638864, guid: aaf80b44acca8ac43815e36b53e6f153,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7167546179887638864, guid: aaf80b44acca8ac43815e36b53e6f153,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 4.35
-      objectReference: {fileID: 0}
-    - target: {fileID: 7167546179887638864, guid: aaf80b44acca8ac43815e36b53e6f153,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: -0.00000035762784
-      objectReference: {fileID: 0}
-    - target: {fileID: 7167546179887638864, guid: aaf80b44acca8ac43815e36b53e6f153,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7167546179887638864, guid: aaf80b44acca8ac43815e36b53e6f153,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7167546179887638864, guid: aaf80b44acca8ac43815e36b53e6f153,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7167546179887638864, guid: aaf80b44acca8ac43815e36b53e6f153,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7167546179887638864, guid: aaf80b44acca8ac43815e36b53e6f153,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -180
-      objectReference: {fileID: 0}
-    - target: {fileID: 7167546179887638864, guid: aaf80b44acca8ac43815e36b53e6f153,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7167546179887638870, guid: aaf80b44acca8ac43815e36b53e6f153,
-        type: 3}
-      propertyPath: m_Name
-      value: ContainerCounter_MeatPattyUncooked
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: aaf80b44acca8ac43815e36b53e6f153, type: 3}
 --- !u!1 &1294043826
 GameObject:
   m_ObjectHideFlags: 0
@@ -13117,7 +13044,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 62.2
+  m_fontSize: 62.25
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -14133,6 +14060,74 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2136098958}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2336308584095927058
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 981715798}
+    m_Modifications:
+    - target: {fileID: 4901866450690434465, guid: 5ad70540b3b898b4d904baeaa2bad212,
+        type: 3}
+      propertyPath: m_Name
+      value: ContainerCounter_MeatPattyUncooked
+      objectReference: {fileID: 0}
+    - target: {fileID: 4901866450690434471, guid: 5ad70540b3b898b4d904baeaa2bad212,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4901866450690434471, guid: 5ad70540b3b898b4d904baeaa2bad212,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4901866450690434471, guid: 5ad70540b3b898b4d904baeaa2bad212,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 4.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 4901866450690434471, guid: 5ad70540b3b898b4d904baeaa2bad212,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.00000035762784
+      objectReference: {fileID: 0}
+    - target: {fileID: 4901866450690434471, guid: 5ad70540b3b898b4d904baeaa2bad212,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4901866450690434471, guid: 5ad70540b3b898b4d904baeaa2bad212,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4901866450690434471, guid: 5ad70540b3b898b4d904baeaa2bad212,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4901866450690434471, guid: 5ad70540b3b898b4d904baeaa2bad212,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4901866450690434471, guid: 5ad70540b3b898b4d904baeaa2bad212,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -180
+      objectReference: {fileID: 0}
+    - target: {fileID: 4901866450690434471, guid: 5ad70540b3b898b4d904baeaa2bad212,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5ad70540b3b898b4d904baeaa2bad212, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
