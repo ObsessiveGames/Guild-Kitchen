@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4442ea4a044ede84584cdb4ac6e784ff, type: 3}
   m_Name: CarrotRaw-CarrotBoiled
   m_EditorClassIdentifier: Assembly-CSharp::OverboilRecipeSO
-  input: {fileID: 0}
-  output: {fileID: 0}
-  overboilTimeMax: 0
+  input: {fileID: 11400000, guid: 289b5daa100d9d8429805f1f72f1511a, type: 2}
+  output: {fileID: 11400000, guid: 46d865345ab2e0c429418f66e34e5472, type: 2}
+  overboilTimeMax: 5
