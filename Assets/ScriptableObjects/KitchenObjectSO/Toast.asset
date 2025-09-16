@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2c884917dbeda9847b195d6a3d812992, type: 3}
-  m_Name: Plate-SteakMeal
+  m_Name: Toast
   m_EditorClassIdentifier: 
-  prefab: {fileID: 6463910788594160268, guid: 5399d1bd0a31ec4449988dffe2e68e14, type: 3}
+  prefab: {fileID: 5386887823679836113, guid: 082221fc4fb05334d8e7590200b897eb, type: 3}
   sprite: {fileID: 21300000, guid: a01087ce1455c7e4c8f2410c26afcfd2, type: 3}
-  objectName: Plate-SteakMeal
+  objectName: Toast
