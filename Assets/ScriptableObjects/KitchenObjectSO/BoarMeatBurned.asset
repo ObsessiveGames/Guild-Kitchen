@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2c884917dbeda9847b195d6a3d812992, type: 3}
-  m_Name: SteakUncooked
+  m_Name: BoarMeatBurned
   m_EditorClassIdentifier: 
-  prefab: {fileID: 4179471067381427305, guid: a5d6f7227ddb7df4ca7e399bfc4563c1, type: 3}
+  prefab: {fileID: 4119054333961309592, guid: f918a83a3f5da98448dd9aead0c919b9, type: 3}
   sprite: {fileID: 21300000, guid: a01087ce1455c7e4c8f2410c26afcfd2, type: 3}
-  objectName: SteakUncooked
+  objectName: BoarMeatBurned

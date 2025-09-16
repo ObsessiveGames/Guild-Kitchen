@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae5e2a31f91699d4b8fa75670ec6c67d, type: 3}
+  m_Name: AdventurersMeal
+  m_EditorClassIdentifier: 
+  kitchenObjectSOList:
+  - {fileID: 11400000, guid: add7dba8490d6054592a7cdb12e2a739, type: 2}
+  - {fileID: 11400000, guid: 340fb0edb070b0b41b9e174d8b6eebcc, type: 2}
+  - {fileID: 11400000, guid: 5fa33ac0b50014242981ccd1d746f53f, type: 2}
+  recipeName: AdventurersMeal

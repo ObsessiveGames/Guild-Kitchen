@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1326603204696708374}
   - component: {fileID: 5954508694304021167}
   m_Layer: 0
-  m_Name: SteakUncooked
+  m_Name: SteakBurned
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -102,4 +102,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f406727b4c8e9240be17d25d3954cd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::KitchenObject
-  kitchenObjectSO: {fileID: 11400000, guid: d348727db7640df4eaaae8d88ed0d1a3, type: 2}
+  kitchenObjectSO: {fileID: 11400000, guid: 3574d1680a83fd94da205f617b158430, type: 2}
