@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c884917dbeda9847b195d6a3d812992, type: 3}
+  m_Name: PieRegular
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 3532319962668835998, guid: 0bcb26923594368418c2a530a5172bdb, type: 3}
+  sprite: {fileID: 21300000, guid: 114b0da55051c094b90c77403aff838e, type: 3}
+  objectName: PieRegular
