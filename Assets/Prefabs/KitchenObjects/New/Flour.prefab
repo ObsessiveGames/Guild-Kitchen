@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5009552162566306012
+--- !u!1 &8328641285923839815
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,47 +8,47 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4179471067381427305}
-  - component: {fileID: 2967812742882696982}
-  - component: {fileID: 1326603204696708374}
-  - component: {fileID: 5954508694304021167}
+  - component: {fileID: 376619757340381310}
+  - component: {fileID: 6547902540719693840}
+  - component: {fileID: 8519639200021598511}
+  - component: {fileID: 8554164279222128269}
   m_Layer: 0
-  m_Name: SteakBurned
+  m_Name: Flour
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
---- !u!4 &4179471067381427305
+--- !u!4 &376619757340381310
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5009552162566306012}
+  m_GameObject: {fileID: 8328641285923839815}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.3081, y: 2.3081, z: 2.3081}
+  m_LocalPosition: {x: 2.4760737, y: 1.3508261, z: -8.027427}
+  m_LocalScale: {x: 1.2546, y: 1.2546, z: 1.2546}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &2967812742882696982
+--- !u!33 &6547902540719693840
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5009552162566306012}
-  m_Mesh: {fileID: 4168122487162984595, guid: 95e80513be779734f85d41c1038ce973, type: 3}
---- !u!23 &1326603204696708374
+  m_GameObject: {fileID: 8328641285923839815}
+  m_Mesh: {fileID: 2113548798825153527, guid: d29db649a7b12ff499dcaaa6b2ce8aa5, type: 3}
+--- !u!23 &8519639200021598511
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5009552162566306012}
+  m_GameObject: {fileID: 8328641285923839815}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -90,16 +90,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &5954508694304021167
+--- !u!114 &8554164279222128269
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5009552162566306012}
+  m_GameObject: {fileID: 8328641285923839815}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3f406727b4c8e9240be17d25d3954cd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::KitchenObject
-  kitchenObjectSO: {fileID: 11400000, guid: 3574d1680a83fd94da205f617b158430, type: 2}
+  kitchenObjectSO: {fileID: 11400000, guid: 21ed306a1611728428f36cd8fdae148a, type: 2}

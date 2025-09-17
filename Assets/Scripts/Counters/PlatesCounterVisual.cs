@@ -8,6 +8,7 @@ public class PlatesCounterVisual : MonoBehaviour
     [SerializeField] private Transform counterTopPoint;
     [SerializeField] private Transform plateVisualPrefab;
 
+
     private List<GameObject> plateVisualGameObjectList;
 
     private void Awake()

@@ -1,8 +1,8 @@
-using System;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 
-public class PlateCompleteVisual : MonoBehaviour
+public class PotCompleteVisual : MonoBehaviour
 {
 
 
@@ -16,13 +16,13 @@ public class PlateCompleteVisual : MonoBehaviour
     }
 
 
-    [SerializeField] private PlateKitchenObject plateKitchenObject;
+    [SerializeField] private PotKitchenObject potKitchenObject;
     [SerializeField] private List<KitchenObjectSO_GameObject> kitchenObjectSOGameObjectList;
 
 
     private void Start()
     {
-        plateKitchenObject.OnIngredientAdded += PlateKitchenObject_OnIngredientAdded;
+        potKitchenObject.OnIngredientAdded += PotKitchenObject_OnIngredientAdded;
 
         foreach (KitchenObjectSO_GameObject kitchenObjectSOGameObject in kitchenObjectSOGameObjectList)
         {
@@ -30,7 +30,7 @@ public class PlateCompleteVisual : MonoBehaviour
         }
     }
 
-    private void PlateKitchenObject_OnIngredientAdded(object sender, PlateKitchenObject.OnIngredientAddedEventArgs e)
+    private void PotKitchenObject_OnIngredientAdded(object sender, PotKitchenObject.OnIngredientAddedEventArgs e)
     {
         foreach (KitchenObjectSO_GameObject kitchenObjectSOGameObject in kitchenObjectSOGameObjectList)
         {

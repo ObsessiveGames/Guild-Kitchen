@@ -13,7 +13,7 @@ public class PlatesCounter : BaseCounter
     private float spawnPlateTimer;
     private float spawnPlateTimerMax = 4f;
     private int platesSpawnedAmount;
-    private int platesSpawnedAmountMax = 4;
+    [SerializeField] private int platesSpawnedAmountMax = 4;
 
     private void Update()
     {
