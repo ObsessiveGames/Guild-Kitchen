@@ -267,7 +267,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5709046874296916809, guid: 4e1aa29dc583d734f96f9eb02864096d,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 783351874007755487}
+      addedObject: {fileID: 8843666941431320403}
   m_SourcePrefab: {fileID: 100100000, guid: 4e1aa29dc583d734f96f9eb02864096d, type: 3}
 --- !u!4 &8197060108523942923 stripped
 Transform:
@@ -281,7 +281,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 4260710240564923530}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &783351874007755487
+--- !u!114 &8843666941431320403
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -290,12 +290,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 8366437421217765315}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9b4b7a5f6cd0494aad25ef52d6d7137, type: 3}
+  m_Script: {fileID: 11500000, guid: a4a967d6a02986843b2a042c31264418, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier: Assembly-CSharp::CutleryCounter
   counterTopPoint: {fileID: 8197060108523942923}
-  plateKitchenObjectSO: {fileID: 11400000, guid: 4440063eddf92f04c856bf432fba421e,
+  cutleryKitchenObjectSO: {fileID: 11400000, guid: 4440063eddf92f04c856bf432fba421e,
     type: 2}
+  cutlerySpawnedAmountMax: 4
 --- !u!4 &8366437421217765317 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5709046874296916815, guid: 4e1aa29dc583d734f96f9eb02864096d,
@@ -444,7 +445,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03e2436108ca8a74f9d1075feabd1841, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseCounter: {fileID: 783351874007755487}
+  baseCounter: {fileID: 0}
   visualGameObjectArray:
   - {fileID: 8604661786546899454}
 --- !u!1001 &5835554867350546360
@@ -732,7 +733,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4589716710238282922, guid: e21b499d164095947b7559f0267f0e63,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 5770188397333178903}
+      addedObject: {fileID: 1381540640767044945}
   m_SourcePrefab: {fileID: 100100000, guid: e21b499d164095947b7559f0267f0e63, type: 3}
 --- !u!4 &5594181041208590292 stripped
 Transform:
@@ -746,7 +747,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 8220042402222250879}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &5770188397333178903
+--- !u!114 &1381540640767044945
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -755,10 +756,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5594181041208590293}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2270fe4022db13346b3f5cf81911d94b, type: 3}
+  m_Script: {fileID: 11500000, guid: 70649cc6874f6b5478419ba46ec138d2, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: 
-  platesCounter: {fileID: 783351874007755487}
+  m_EditorClassIdentifier: Assembly-CSharp::CutleryCounterVisual
+  cutleryCounter: {fileID: 8843666941431320403}
   counterTopPoint: {fileID: 8197060108523942923}
-  plateVisualPrefab: {fileID: 3812876574508226176, guid: edf7f8a2dccc829418a81e321d3da810,
+  cutleryVisualPrefab: {fileID: 3812876574508226176, guid: edf7f8a2dccc829418a81e321d3da810,
     type: 3}

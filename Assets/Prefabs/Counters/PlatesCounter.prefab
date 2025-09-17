@@ -667,6 +667,7 @@ MonoBehaviour:
   counterTopPoint: {fileID: 2372148963565452844}
   plateKitchenObjectSO: {fileID: 11400000, guid: 4440063eddf92f04c856bf432fba421e,
     type: 2}
+  platesSpawnedAmountMax: 4
 --- !u!1001 &8908299972740044374
 PrefabInstance:
   m_ObjectHideFlags: 0
