@@ -183,4 +183,10 @@ public class CauldronCounter : BaseCounter, IHasProgress
     {
         return state == State.Boiled;
     }
+
+    public State GetCurrentState()
+    {
+        return state;
+    }
+
 }

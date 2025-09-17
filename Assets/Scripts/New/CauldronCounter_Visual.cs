@@ -1,22 +1,19 @@
-using System;
 using UnityEngine;
 
 public class CauldronCounter_Visual : MonoBehaviour
 {
-
     [SerializeField] private CauldronCounter cauldronCounter;
-    [SerializeField] private GameObject boilingParticlesGameObject;
-    [SerializeField] private GameObject overboilParticlesGameObject;
-    [SerializeField] private Animator animator;
 
-    private const string IS_BOILING = "IsBoiling";
+    [Header("Visuals")]
+    [SerializeField] private GameObject cauldronOn;   // Particle effect (bubbles/steam)
+    [SerializeField] private Light cauldronLight;     // Light to glow when cooking
 
     private void Start()
     {
         cauldronCounter.OnStateChanged += CauldronCounter_OnStateChanged;
 
-        // Set initial state
-        SetVisualState(cauldronCounter.IsBoiled() ? CauldronCounter.State.Boiled : CauldronCounter.State.Idle);
+        // Initialize visuals to match current state
+        SetVisualState(cauldronCounter.GetCurrentState());
     }
 
     private void CauldronCounter_OnStateChanged(object sender, CauldronCounter.OnStateChangedEventArgs e)
@@ -26,31 +23,9 @@ public class CauldronCounter_Visual : MonoBehaviour
 
     private void SetVisualState(CauldronCounter.State state)
     {
-        switch (state)
-        {
-            case CauldronCounter.State.Idle:
-                boilingParticlesGameObject.SetActive(false);
-                overboilParticlesGameObject.SetActive(false);
-                animator.SetBool(IS_BOILING, false);
-                break;
+        bool isActive = state == CauldronCounter.State.Boiling || state == CauldronCounter.State.Boiled;
 
-            case CauldronCounter.State.Boiling:
-                boilingParticlesGameObject.SetActive(true);
-                overboilParticlesGameObject.SetActive(false);
-                animator.SetBool(IS_BOILING, true);
-                break;
-
-            case CauldronCounter.State.Boiled:
-                boilingParticlesGameObject.SetActive(false);
-                overboilParticlesGameObject.SetActive(true); // Steam rising or warning
-                animator.SetBool(IS_BOILING, false);
-                break;
-
-            case CauldronCounter.State.Burned:
-                boilingParticlesGameObject.SetActive(false);
-                overboilParticlesGameObject.SetActive(false);
-                animator.SetBool(IS_BOILING, false);
-                break;
-        }
+        cauldronOn.SetActive(isActive);
+        cauldronLight.enabled = isActive;
     }
 }

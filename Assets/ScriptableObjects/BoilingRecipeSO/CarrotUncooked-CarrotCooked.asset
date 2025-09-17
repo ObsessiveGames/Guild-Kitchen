@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: CarrotUncooked-CarrotCooked
   m_EditorClassIdentifier: Assembly-CSharp::BoilingRecipeSO
   input: {fileID: 11400000, guid: 368e3e60902d66641910fb24f820be82, type: 2}
-  output: {fileID: 11400000, guid: 46d865345ab2e0c429418f66e34e5472, type: 2}
+  output: {fileID: 11400000, guid: 289b5daa100d9d8429805f1f72f1511a, type: 2}
   boilingTimeMax: 12
