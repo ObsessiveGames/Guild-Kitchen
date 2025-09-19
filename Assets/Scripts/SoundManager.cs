@@ -89,6 +89,16 @@ public class SoundManager : MonoBehaviour
         PlaySound(audioClipRefsSO.warning, position);
     }
 
+    public void PlayPotCookingSound(Vector3 position)
+    {
+        PlaySound(audioClipRefsSO.potCooking, position);
+    }
+
+    public void PlayWarningSoundAt(Vector3 position)
+    {
+        PlaySound(audioClipRefsSO.warning, position);
+    }
+
     public void ChangeVolume()
     {
         volume += .1f;

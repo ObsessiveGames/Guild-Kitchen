@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class CauldronCounter : BaseCounter, IHasProgress
 {
-
     public event EventHandler<IHasProgress.OnProgressChangedEventArgs> OnProgressChanged;
     public event EventHandler<OnStateChangedEventArgs> OnStateChanged;
 
@@ -16,82 +15,68 @@ public class CauldronCounter : BaseCounter, IHasProgress
     {
         Idle,
         Boiling,
-        Boiled,
-        Burned,
+        Finished,
+        Overboiled,
     }
 
-    [SerializeField] private BoilingRecipeSO[] boilingRecipeSOArray;
-    [SerializeField] private OverboilRecipeSO[] overboilRecipeSOArray;
+    // grabs pots ingredient info
+    [SerializeField] private PotKitchenObject currentPot;
+    [SerializeField] private PotCompleteVisual potCompleteVisual;
+
+    [SerializeField] private float potBoilTimeMax = 5f;
+    [SerializeField] private float potOverboilTimeMax = 4f;
+
 
     private State state;
-    private float boilingTimer;
-    private float overboilTimer;
+    private float potTimer;
 
-    private BoilingRecipeSO boilingRecipeSO;
-    private OverboilRecipeSO overboilRecipeSO;
-
-    private void Start()
-    {
-        state = State.Idle;
-    }
+    public State GetCurrentState() => state;
 
     private void Update()
     {
-        if (HasKitchenObject())
+        if (!currentPot) return;
+
+        switch (state)
         {
-            switch (state)
-            {
-                case State.Idle:
-                    break;
-                case State.Boiling:
-                    boilingTimer += Time.deltaTime;
+            case State.Idle:
+                break;
 
-                    OnProgressChanged?.Invoke(this, new IHasProgress.OnProgressChangedEventArgs
-                    {
-                        progressNormalized = boilingTimer / boilingRecipeSO.boilingTimeMax
-                    });
+            case State.Boiling:
+                potTimer += Time.deltaTime;
+                OnProgressChanged?.Invoke(this, new IHasProgress.OnProgressChangedEventArgs
+                {
+                    progressNormalized = potTimer / potBoilTimeMax
+                });
 
-                    if (boilingTimer > boilingRecipeSO.boilingTimeMax)
-                    {
-                        // Done Boiling
-                        GetKitchenObject().DestroySelf();
-                        KitchenObject.SpawnKitchenObject(boilingRecipeSO.output, this);
+                if (potTimer >= potBoilTimeMax)
+                {
+                    state = State.Finished;
+                    potTimer = 0f;
+                    OnStateChanged?.Invoke(this, new OnStateChangedEventArgs { state = state });
 
-                        state = State.Boiled;
-                        overboilTimer = 0f;
-                        overboilRecipeSO = GetOverboilRecipeSOWithInput(GetKitchenObject().GetKitchenObjectSO());
+                    // Automatically cook the pot ingredients when finished
+                    CookPotIngredients();
+                }
+                break;
 
-                        OnStateChanged?.Invoke(this, new OnStateChangedEventArgs { state = state });
-                    }
-                    break;
+            case State.Finished:
+                potTimer += Time.deltaTime;
+                OnProgressChanged?.Invoke(this, new IHasProgress.OnProgressChangedEventArgs
+                {
+                    progressNormalized = potTimer / potOverboilTimeMax
+                });
 
-                case State.Boiled:
-                    overboilTimer += Time.deltaTime;
+                if (potTimer >= potOverboilTimeMax)
+                {
+                    state = State.Overboiled;
+                    OnStateChanged?.Invoke(this, new OnStateChangedEventArgs { state = state });
+                    OnProgressChanged?.Invoke(this, new IHasProgress.OnProgressChangedEventArgs { progressNormalized = 0f });
+                }
+                break;
 
-                    OnProgressChanged?.Invoke(this, new IHasProgress.OnProgressChangedEventArgs
-                    {
-                        progressNormalized = overboilTimer / overboilRecipeSO.overboilTimeMax
-                    });
-
-                    if (overboilTimer > overboilRecipeSO.overboilTimeMax)
-                    {
-                        // Overboiled
-                        GetKitchenObject().DestroySelf();
-                        KitchenObject.SpawnKitchenObject(overboilRecipeSO.output, this);
-
-                        state = State.Burned;
-
-                        OnStateChanged?.Invoke(this, new OnStateChangedEventArgs { state = state });
-                        OnProgressChanged?.Invoke(this, new IHasProgress.OnProgressChangedEventArgs
-                        {
-                            progressNormalized = 0f
-                        });
-                    }
-                    break;
-
-                case State.Burned:
-                    break;
-            }
+            case State.Overboiled:
+                // nothing to do
+                break;
         }
     }
 
@@ -99,94 +84,51 @@ public class CauldronCounter : BaseCounter, IHasProgress
     {
         if (!HasKitchenObject())
         {
-            // Cauldron is empty
             if (player.HasKitchenObject())
             {
-                if (HasRecipeWithInput(player.GetKitchenObject().GetKitchenObjectSO()))
+                // Only accept PotKitchenObject
+                if (player.GetKitchenObject().TryGetPot(out PotKitchenObject potKitchenObject))
                 {
-                    // Start Boiling
-                    player.GetKitchenObject().SetKitchenObjectParent(this);
-
-                    boilingRecipeSO = GetBoilingRecipeSOWithInput(GetKitchenObject().GetKitchenObjectSO());
-
+                    currentPot = potKitchenObject; // <--- assign it
+                    potKitchenObject.SetKitchenObjectParent(this);
                     state = State.Boiling;
-                    boilingTimer = 0f;
+                    potTimer = 0f;
 
                     OnStateChanged?.Invoke(this, new OnStateChangedEventArgs { state = state });
-
-                    OnProgressChanged?.Invoke(this, new IHasProgress.OnProgressChangedEventArgs
-                    {
-                        progressNormalized = 0f
-                    });
+                    OnProgressChanged?.Invoke(this, new IHasProgress.OnProgressChangedEventArgs { progressNormalized = 0f });
                 }
             }
         }
         else
         {
-            // Cauldron has something
-            if (player.HasKitchenObject())
+            // Player picks up pot
+            if (!player.HasKitchenObject())
             {
-                if (player.GetKitchenObject().TryGetPlate(out PlateKitchenObject plateKitchenObject))
-                {
-                    if (plateKitchenObject.TryAddIngredient(GetKitchenObject().GetKitchenObjectSO()))
-                    {
-                        GetKitchenObject().DestroySelf();
-                        state = State.Idle;
-
-                        OnStateChanged?.Invoke(this, new OnStateChangedEventArgs { state = state });
-                        OnProgressChanged?.Invoke(this, new IHasProgress.OnProgressChangedEventArgs
-                        {
-                            progressNormalized = 0f
-                        });
-                    }
-                }
-            }
-            else
-            {
-                // Player takes cooked object
                 GetKitchenObject().SetKitchenObjectParent(player);
                 state = State.Idle;
+                potTimer = 0f;
 
                 OnStateChanged?.Invoke(this, new OnStateChangedEventArgs { state = state });
-                OnProgressChanged?.Invoke(this, new IHasProgress.OnProgressChangedEventArgs
-                {
-                    progressNormalized = 0f
-                });
+                OnProgressChanged?.Invoke(this, new IHasProgress.OnProgressChangedEventArgs { progressNormalized = 0f });
+ 
             }
         }
     }
 
-    private bool HasRecipeWithInput(KitchenObjectSO input)
+    private void CookPotIngredients()
     {
-        return GetBoilingRecipeSOWithInput(input) != null;
+        if (currentPot == null) return;
+
+        var ingredients = currentPot.GetKitchenObjectSOList();
+        currentPot.CookIngredients();
+
     }
 
-    private BoilingRecipeSO GetBoilingRecipeSOWithInput(KitchenObjectSO input)
+    public bool IsBoilingFinished()
     {
-        foreach (BoilingRecipeSO recipe in boilingRecipeSOArray)
-        {
-            if (recipe.input == input) return recipe;
-        }
-        return null;
+        return potTimer >= potBoilTimeMax; // assuming you have potBoilTimeMax
     }
 
-    private OverboilRecipeSO GetOverboilRecipeSOWithInput(KitchenObjectSO input)
-    {
-        foreach (OverboilRecipeSO recipe in overboilRecipeSOArray)
-        {
-            if (recipe.input == input) return recipe;
-        }
-        return null;
-    }
-
-    public bool IsBoiled()
-    {
-        return state == State.Boiled;
-    }
-
-    public State GetCurrentState()
-    {
-        return state;
-    }
-
+    public bool IsBoiling() => state == State.Boiling;
+    public bool IsFinished() => state == State.Finished;
 }

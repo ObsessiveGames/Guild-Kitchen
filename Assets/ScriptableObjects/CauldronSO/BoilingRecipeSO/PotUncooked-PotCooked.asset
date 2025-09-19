@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05ef3979e92b46f4bbfa70e9805395fb, type: 3}
   m_Name: PotUncooked-PotCooked
   m_EditorClassIdentifier: Assembly-CSharp::BoilingRecipeSO
-  input: {fileID: 11400000, guid: 368e3e60902d66641910fb24f820be82, type: 2}
-  output: {fileID: 11400000, guid: 289b5daa100d9d8429805f1f72f1511a, type: 2}
-  boilingTimeMax: 12
+  input: {fileID: 11400000, guid: 669a6a9b125df3342ae2737e6b7e9546, type: 2}
+  output: {fileID: 11400000, guid: 669a6a9b125df3342ae2737e6b7e9546, type: 2}
+  boilingTimeMax: 5

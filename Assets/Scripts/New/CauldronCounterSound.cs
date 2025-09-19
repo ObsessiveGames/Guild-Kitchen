@@ -3,6 +3,7 @@ using UnityEngine;
 public class CauldronCounterSound : MonoBehaviour
 {
     [SerializeField] private CauldronCounter cauldronCounter;
+    [SerializeField] private AudioClipRefsSO audioClipRefsSO;
 
     private AudioSource audioSource;
     private float warningSoundTimer;
@@ -10,7 +11,10 @@ public class CauldronCounterSound : MonoBehaviour
 
     private void Awake()
     {
+        // AudioSource must be attached to the same GameObject as this script
         audioSource = GetComponent<AudioSource>();
+        audioSource.loop = true; // Loop the pot cooking sound
+        audioSource.clip = audioClipRefsSO.potCooking; // Assign the cooking clip
     }
 
     private void Start()
@@ -38,23 +42,25 @@ public class CauldronCounterSound : MonoBehaviour
     private void CauldronCounter_OnProgressChanged(object sender, IHasProgress.OnProgressChangedEventArgs e)
     {
         float burnShowProgressAmount = 0.5f;
-        // Only play warning if food is boiled and overboiling progress is above halfway
-        playWarningSound = cauldronCounter.GetCurrentState() == CauldronCounter.State.Boiled &&
-                           e.progressNormalized >= burnShowProgressAmount;
+
+        // Show warning only if the pot is finished boiling and progress is halfway to overboil
+        playWarningSound = cauldronCounter.IsFinished() && e.progressNormalized >= burnShowProgressAmount;
     }
 
     private void CauldronCounter_OnStateChanged(object sender, CauldronCounter.OnStateChangedEventArgs e)
     {
-        // Play looping cooking sound while boiling or boiled
-        bool playSound = e.state == CauldronCounter.State.Boiling || e.state == CauldronCounter.State.Boiled;
+        // Play cooking sound while Boiling or Finished
+        bool playSound = e.state == CauldronCounter.State.Boiling || e.state == CauldronCounter.State.Finished;
 
         if (playSound)
         {
-            audioSource.Play();
+            if (!audioSource.isPlaying)
+                audioSource.Play();
         }
         else
         {
-            audioSource.Pause();
+            if (audioSource.isPlaying)
+                audioSource.Pause();
         }
     }
 }

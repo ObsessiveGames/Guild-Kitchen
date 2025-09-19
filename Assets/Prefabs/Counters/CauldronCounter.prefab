@@ -218,6 +218,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CauldronCounterSound
   cauldronCounter: {fileID: 2380195451305341251}
+  audioClipRefsSO: {fileID: 11400000, guid: 903de079ebbfafb4596843a2ecc4042a, type: 2}
 --- !u!1 &2743420647874989780
 GameObject:
   m_ObjectHideFlags: 0
@@ -530,6 +531,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 6724005534098627188, guid: 5120f0c73af6ddb45bef307b795e04a3, type: 3}
+    - {fileID: 6092199122851364323, guid: 5120f0c73af6ddb45bef307b795e04a3, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 1648569857757285282, guid: 5120f0c73af6ddb45bef307b795e04a3,
@@ -557,7 +559,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SelectedCounterVisual
   baseCounter: {fileID: 2380195451305341251}
   visualGameObjectArray:
-  - {fileID: 6085320375809567983}
   - {fileID: 2910184465247592273}
 --- !u!1 &2910184465247592273 stripped
 GameObject:
@@ -568,12 +569,6 @@ GameObject:
 --- !u!4 &4450662359258444358 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4412223224010384202, guid: 5120f0c73af6ddb45bef307b795e04a3,
-    type: 3}
-  m_PrefabInstance: {fileID: 69999793502621964}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &6085320375809567983 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6092199122851364323, guid: 5120f0c73af6ddb45bef307b795e04a3,
     type: 3}
   m_PrefabInstance: {fileID: 69999793502621964}
   m_PrefabAsset: {fileID: 0}
@@ -876,6 +871,18 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 4517333114772661310}
   m_SourcePrefab: {fileID: 100100000, guid: 5120f0c73af6ddb45bef307b795e04a3, type: 3}
+--- !u!1 &1153141405476534403 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6724005534098627188, guid: 5120f0c73af6ddb45bef307b795e04a3,
+    type: 3}
+  m_PrefabInstance: {fileID: 5571146904974959351}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1863195316515036948 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6092199122851364323, guid: 5120f0c73af6ddb45bef307b795e04a3,
+    type: 3}
+  m_PrefabInstance: {fileID: 5571146904974959351}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &6606874227025291605 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1648569857757285282, guid: 5120f0c73af6ddb45bef307b795e04a3,
@@ -895,14 +902,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CauldronCounter_Visual
   cauldronCounter: {fileID: 2380195451305341251}
-  cauldronOn: {fileID: 7426499134611854910}
+  cauldronOn:
+  - {fileID: 1863195316515036948}
+  - {fileID: 1153141405476534403}
   cauldronLight: {fileID: 8401880732837491807}
---- !u!1 &7426499134611854910 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3044584025718371529, guid: 5120f0c73af6ddb45bef307b795e04a3,
-    type: 3}
-  m_PrefabInstance: {fileID: 5571146904974959351}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8100829157892719037 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4412223224010384202, guid: 5120f0c73af6ddb45bef307b795e04a3,
@@ -958,6 +961,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4024645599107639463, guid: 4e1aa29dc583d734f96f9eb02864096d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5395554102680090753, guid: 4e1aa29dc583d734f96f9eb02864096d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -976,7 +984,7 @@ PrefabInstance:
     - target: {fileID: 5709046874296916809, guid: 4e1aa29dc583d734f96f9eb02864096d,
         type: 3}
       propertyPath: m_Name
-      value: Cauldron
+      value: CauldronCounter
       objectReference: {fileID: 0}
     - target: {fileID: 5709046874296916815, guid: 4e1aa29dc583d734f96f9eb02864096d,
         type: 3}
@@ -1087,10 +1095,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CauldronCounter
   counterTopPoint: {fileID: 3476158954752006203}
-  boilingRecipeSOArray:
-  - {fileID: 11400000, guid: 6758b0f5c2599fa47abb9bef362fdf2b, type: 2}
-  overboilRecipeSOArray:
-  - {fileID: 11400000, guid: ee279173d73be1e4cb59108b6e6b62d4, type: 2}
+  potBoilTimeMax: 5
+  potOverboilTimeMax: 4
 --- !u!4 &3884227247412427765 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5709046874296916815, guid: 4e1aa29dc583d734f96f9eb02864096d,

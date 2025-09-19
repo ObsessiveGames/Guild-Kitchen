@@ -1,5 +1,5 @@
-using System.Collections.Generic;
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class PotCompleteVisual : MonoBehaviour
@@ -41,4 +41,25 @@ public class PotCompleteVisual : MonoBehaviour
         }
     }
 
+    /// Call this method after cooking is done to replace raw visuals with cooked visuals
+    /// <param name="rawIngredient">The raw KitchenObjectSO</param>
+    /// <param name="cookedIngredient">The cooked KitchenObjectSO</param>
+    
+    
+    public void ReplaceRawWithCooked(KitchenObjectSO rawIngredient, KitchenObjectSO cookedIngredient)
+    {
+        GameObject rawGO = null;
+        GameObject cookedGO = null;
+
+        foreach (var obj in kitchenObjectSOGameObjectList)
+        {
+            if (obj.kitchenObjectSO == rawIngredient)
+                rawGO = obj.gameObject;
+            if (obj.kitchenObjectSO == cookedIngredient)
+                cookedGO = obj.gameObject;
+        }
+
+        if (rawGO != null) rawGO.SetActive(false);
+        if (cookedGO != null) cookedGO.SetActive(true);
+    }
 }

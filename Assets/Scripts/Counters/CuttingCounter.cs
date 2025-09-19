@@ -28,39 +28,36 @@ public class CuttingCounter : BaseCounter, IHasProgress
     {
         if (!HasKitchenObject())
         {
-            // There is no KitchenObject here
             if (player.HasKitchenObject())
             {
-                // Player is carrying something
-                if (HasRecipeWithInput(player.GetKitchenObject().GetKitchenObjectSO()))
+                // Player carrying something that can be cut
+                player.GetKitchenObject().SetKitchenObjectParent(this);
+                cuttingProgress = 0;
+
+                CuttingRecipeSO cuttingRecipeSO = GetCuttingRecipeSOWithInput(GetKitchenObject().GetKitchenObjectSO());
+
+                OnProgressChanged?.Invoke(this, new IHasProgress.OnProgressChangedEventArgs
                 {
-                    // Player carrying something that can be cut.
-                    player.GetKitchenObject().SetKitchenObjectParent(this);
-                    cuttingProgress = 0;
-
-                    CuttingRecipeSO cuttingRecipeSO = GetCuttingRecipeSOWithInput(GetKitchenObject().GetKitchenObjectSO());
-
-                    OnProgressChanged?.Invoke(this, new IHasProgress.OnProgressChangedEventArgs
-                    {
-                        progressNormalized = (float)cuttingProgress / cuttingRecipeSO.cuttingProgressMax
-                    });
-                }
-            }
-            else
-            {
-                // Player not carrying anything
+                    progressNormalized = (float)cuttingProgress / cuttingRecipeSO.cuttingProgressMax
+                });
             }
         }
         else
         {
-            // There is a KitchenObject here
+            // Counter has a KitchenObject
             if (player.HasKitchenObject())
             {
-                // Player is carrying something
-                if (player.GetKitchenObject().TryGetPlate(out PlateKitchenObject plateKitchenObject))
+                // Player has something: check for plate or pot
+                if (player.GetKitchenObject().TryGetPlate(out PlateKitchenObject plate))
                 {
-                    // Player is holding a Plate
-                    if (plateKitchenObject.TryAddIngredient(GetKitchenObject().GetKitchenObjectSO()))
+                    if (plate.TryAddIngredient(GetKitchenObject().GetKitchenObjectSO()))
+                    {
+                        GetKitchenObject().DestroySelf();
+                    }
+                }
+                else if (player.GetKitchenObject().TryGetPot(out PotKitchenObject pot))
+                {
+                    if (pot.TryAddIngredient(GetKitchenObject().GetKitchenObjectSO()))
                     {
                         GetKitchenObject().DestroySelf();
                     }
@@ -68,7 +65,7 @@ public class CuttingCounter : BaseCounter, IHasProgress
             }
             else
             {
-                // Player is not carrying anthing
+                // Player is empty-handed: pick up counter object
                 GetKitchenObject().SetKitchenObjectParent(player);
             }
         }

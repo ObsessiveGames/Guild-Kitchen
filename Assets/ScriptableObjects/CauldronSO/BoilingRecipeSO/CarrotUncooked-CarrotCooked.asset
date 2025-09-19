@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BoilingRecipeSO
   input: {fileID: 11400000, guid: 368e3e60902d66641910fb24f820be82, type: 2}
   output: {fileID: 11400000, guid: 289b5daa100d9d8429805f1f72f1511a, type: 2}
-  boilingTimeMax: 12
+  boilingTimeMax: 5

@@ -57,6 +57,21 @@ public class KitchenObject : MonoBehaviour
         }
     }
 
+    public bool TryGetPot(out PotKitchenObject potKitchenObject)
+    {
+        if (this is PotKitchenObject)
+        {
+            potKitchenObject = this as PotKitchenObject;
+            return true;
+        }
+        else
+        {
+            potKitchenObject = null;
+            return false;
+        }
+    }
+
+
     public static KitchenObject SpawnKitchenObject(KitchenObjectSO kitchenObjectSO, IKitchenObjectParent kitchenObjectParent)
     {
         Transform kitchenObjectTransform = Instantiate(kitchenObjectSO.prefab);

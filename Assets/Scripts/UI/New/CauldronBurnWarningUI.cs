@@ -14,18 +14,12 @@ public class CauldronBurnWarningUI : MonoBehaviour
     {
         float burnShowProgressAmount = 0.5f;
 
-        // Show warning only if the cauldron food is boiled AND progress is past halfway to overboil
-        bool show = cauldronCounter.GetCurrentState() == CauldronCounter.State.Boiled &&
+        // Show warning if pot is finished boiling AND progress is past halfway to overboil
+        bool show = cauldronCounter.IsBoilingFinished() &&
                     e.progressNormalized >= burnShowProgressAmount;
 
-        if (show)
-        {
-            Show();
-        }
-        else
-        {
-            Hide();
-        }
+        if (show) Show();
+        else Hide();
     }
 
     private void Show()

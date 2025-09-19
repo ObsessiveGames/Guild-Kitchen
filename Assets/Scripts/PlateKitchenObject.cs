@@ -19,6 +19,19 @@ public class PlateKitchenObject : KitchenObject
         kitchenObjectSOList = new List<KitchenObjectSO>();
     }
 
+    //private void Update()
+    //{
+    //    if (Input.GetKeyDown(KeyCode.O))
+    //    {
+    //        Debug.Log("Plate contains:");
+    //        foreach (KitchenObjectSO kitchenObjectSO in kitchenObjectSOList)
+    //        {
+    //            Debug.Log(kitchenObjectSO.name);
+    //        }
+    //    }
+    //}
+
+
     public bool TryAddIngredient(KitchenObjectSO kitchenObjectSO)
     {
         if (!validKitchenObjectSOList.Contains(kitchenObjectSO))

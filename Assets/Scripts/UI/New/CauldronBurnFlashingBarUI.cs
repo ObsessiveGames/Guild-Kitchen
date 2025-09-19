@@ -24,10 +24,11 @@ public class CauldronBurnFlashingBarUI : MonoBehaviour
     {
         float burnShowProgressAmount = 0.5f;
 
-        // Show flashing only if the food is Boiled and progress is halfway to overboil
-        bool show = cauldronCounter.GetCurrentState() == CauldronCounter.State.Boiled &&
+        // Show flashing only if the food is Finished (formerly Boiled) and progress is halfway to overboil
+        bool show = cauldronCounter.GetCurrentState() == CauldronCounter.State.Finished &&
                     e.progressNormalized >= burnShowProgressAmount;
 
         animator.SetBool(IS_FLASHING, show);
     }
+
 }

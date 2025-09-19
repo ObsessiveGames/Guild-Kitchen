@@ -42,3 +42,4 @@ MonoBehaviour:
   warning:
   - {fileID: 8300000, guid: b90d8099bdbf09a40ab1163556d5b5f4, type: 3}
   - {fileID: 8300000, guid: b59c98e0066c41f42b8100f5cb180f5b, type: 3}
+  potCooking: {fileID: 8300000, guid: c3110b908d056d64bb54bd71bab66a23, type: 3}
