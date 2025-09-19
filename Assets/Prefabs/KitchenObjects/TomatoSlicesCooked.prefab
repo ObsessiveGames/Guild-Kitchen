@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6463910788594160268}
   - component: {fileID: 4634284271485031211}
   m_Layer: 0
-  m_Name: TomatoSlices
+  m_Name: TomatoSlicesCooked
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

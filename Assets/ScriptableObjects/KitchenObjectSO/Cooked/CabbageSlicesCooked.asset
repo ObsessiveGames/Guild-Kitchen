@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2c884917dbeda9847b195d6a3d812992, type: 3}
-  m_Name: EggCooked
+  m_Name: CabbageSlicesCooked
   m_EditorClassIdentifier: 
-  prefab: {fileID: 7274134169067522444, guid: 6cd773d74a86613468d6aebf95d9610a, type: 3}
-  sprite: {fileID: 21300000, guid: a01087ce1455c7e4c8f2410c26afcfd2, type: 3}
-  objectName: Egg
+  prefab: {fileID: 6463910788594160268, guid: 5c78ed669d0db324ead3c64a6aa5da70, type: 3}
+  sprite: {fileID: 21300000, guid: bee24f07c57157e45a946eed3bfe8b84, type: 3}
+  objectName: CabbageSlicesCooked

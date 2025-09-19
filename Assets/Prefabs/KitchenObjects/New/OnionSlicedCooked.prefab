@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 154671632243715094}
   - component: {fileID: -5087799734084928664}
   m_Layer: 0
-  m_Name: OnionSliced
+  m_Name: OnionSlicedCooked
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -102,4 +102,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f406727b4c8e9240be17d25d3954cd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::KitchenObject
-  kitchenObjectSO: {fileID: 11400000, guid: 334b01da6d788734d9d6cda4ab6f6c39, type: 2}
+  kitchenObjectSO: {fileID: 11400000, guid: 1d8c6717fb0dcab429ac804cc3e76965, type: 2}

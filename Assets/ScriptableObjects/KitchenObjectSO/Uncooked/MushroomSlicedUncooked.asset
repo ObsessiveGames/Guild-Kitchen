@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2c884917dbeda9847b195d6a3d812992, type: 3}
-  m_Name: EggCooked
+  m_Name: MushroomSlicedUncooked
   m_EditorClassIdentifier: 
-  prefab: {fileID: 7274134169067522444, guid: 6cd773d74a86613468d6aebf95d9610a, type: 3}
+  prefab: {fileID: 4119054333961309592, guid: 87f570f9208ed8b45a139e6f5bfbbf9c, type: 3}
   sprite: {fileID: 21300000, guid: a01087ce1455c7e4c8f2410c26afcfd2, type: 3}
-  objectName: Egg
+  objectName: MushroomSliced
