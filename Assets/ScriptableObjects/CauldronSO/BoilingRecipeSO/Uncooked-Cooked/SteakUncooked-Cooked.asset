@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 05ef3979e92b46f4bbfa70e9805395fb, type: 3}
-  m_Name: MeatUncooked-MeatBoiled
+  m_Name: SteakUncooked-Cooked
   m_EditorClassIdentifier: Assembly-CSharp::BoilingRecipeSO
-  input: {fileID: 11400000, guid: add7dba8490d6054592a7cdb12e2a739, type: 2}
-  output: {fileID: 11400000, guid: abdb1f6d88bcb6341a13375e424a95b5, type: 2}
+  input: {fileID: 11400000, guid: d348727db7640df4eaaae8d88ed0d1a3, type: 2}
+  output: {fileID: 11400000, guid: 3574d1680a83fd94da205f617b158430, type: 2}
   boilingTimeMax: 5

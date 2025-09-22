@@ -455,8 +455,25 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 0406fc63bf07172439d3405783de91d9, type: 2}
   boilingRecipeSOList:
   - {fileID: 11400000, guid: 0fe53d730786565449dd1dce9afbf453, type: 2}
-  - {fileID: 11400000, guid: abda032f21b60ab4199bc1e38b5a01d2, type: 2}
+  - {fileID: 11400000, guid: 8d0e01dcafdd6a049a4ee49766d93d42, type: 2}
+  - {fileID: 11400000, guid: ba95c9519780713498511579b256d2fa, type: 2}
   - {fileID: 11400000, guid: 8d62589e50d228c45b01d9e1d2f62f19, type: 2}
+  - {fileID: 11400000, guid: 9020832b33d51584788ae2c683ff3559, type: 2}
+  - {fileID: 11400000, guid: e21596df8fc91384d90411f2844d8553, type: 2}
+  - {fileID: 11400000, guid: abda032f21b60ab4199bc1e38b5a01d2, type: 2}
+  - {fileID: 11400000, guid: 07adf95a0d55ab541bd21ac58e17b54c, type: 2}
+  - {fileID: 11400000, guid: 97304012c0f656e41a16ae7fb7fee25a, type: 2}
+  - {fileID: 11400000, guid: b5b28d61ea4478d4e96197e0a43eb78f, type: 2}
+  - {fileID: 11400000, guid: 994a705ab40e1ae4b8044abf20f8ad62, type: 2}
+  - {fileID: 11400000, guid: 2301cf6de6132ca42816d2414410a212, type: 2}
+  - {fileID: 11400000, guid: 3c76f292025805c4f8dc86f176e0f2f6, type: 2}
+  - {fileID: 11400000, guid: 1ee089a0efc0ac74186f3ceb601a8f33, type: 2}
+  - {fileID: 11400000, guid: 2fbb9bb9c2820c44aab0f8bd838fa849, type: 2}
+  - {fileID: 11400000, guid: 687d3321d69f29f4581c6ecd069b18c2, type: 2}
+  - {fileID: 11400000, guid: 4a8115a201f1aaa4084db2af00c71734, type: 2}
+  - {fileID: 11400000, guid: 50efe68917f4fa646a7c3649a2f78448, type: 2}
+  - {fileID: 11400000, guid: 5c9ff900e51cb1e47be4c71b5028b1b3, type: 2}
+  - {fileID: 11400000, guid: 1aeb3f519bc7a1549ae60cba0eac9ac6, type: 2}
   potCompleteVisual: {fileID: 1896910260526107194}
 --- !u!1001 &47673716899181441
 PrefabInstance:
