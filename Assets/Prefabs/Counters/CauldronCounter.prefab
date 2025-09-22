@@ -793,6 +793,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2926140374414151261, guid: 5120f0c73af6ddb45bef307b795e04a3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3543372111175284795, guid: 5120f0c73af6ddb45bef307b795e04a3,
         type: 3}
       propertyPath: m_Enabled
@@ -853,10 +858,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6092199122851364323, guid: 5120f0c73af6ddb45bef307b795e04a3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6242119413923107588, guid: 5120f0c73af6ddb45bef307b795e04a3,
         type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6724005534098627188, guid: 5120f0c73af6ddb45bef307b795e04a3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1095,6 +1110,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CauldronCounter
   counterTopPoint: {fileID: 3476158954752006203}
+  currentPot: {fileID: 0}
+  potCompleteVisual: {fileID: 0}
   potBoilTimeMax: 5
   potOverboilTimeMax: 4
 --- !u!4 &3884227247412427765 stripped

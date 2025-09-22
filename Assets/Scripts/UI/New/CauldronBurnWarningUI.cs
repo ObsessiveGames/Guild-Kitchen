@@ -14,8 +14,8 @@ public class CauldronBurnWarningUI : MonoBehaviour
     {
         float burnShowProgressAmount = 0.5f;
 
-        // Show warning if pot is finished boiling AND progress is past halfway to overboil
-        bool show = cauldronCounter.IsBoilingFinished() &&
+        // Only show warning when cauldron is finished boiling but not overboiled yet
+        bool show = cauldronCounter.GetCurrentState() == CauldronCounter.State.Finished &&
                     e.progressNormalized >= burnShowProgressAmount;
 
         if (show) Show();

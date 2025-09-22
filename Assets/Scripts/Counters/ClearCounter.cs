@@ -45,7 +45,7 @@ public class ClearCounter : BaseCounter
                 }
                 else if (player.GetKitchenObject().TryGetPot(out PotKitchenObject potKitchenObject))
                 {
-                    Debug.Log("this is now a pot");
+                    //Debug.Log("this is now a pot");
                     // Player is holding a Pot
                     if (potKitchenObject.TryAddIngredient(kitchenObjectOnCounter.GetKitchenObjectSO()))
                     {

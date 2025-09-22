@@ -96,7 +96,7 @@ public class PotKitchenObject : KitchenObject
     public void ClearKitchenObjects()
     {
         kitchenObjectSOList.Clear();
-        Debug.Log("Pot has been emptied!");
+        //Debug.Log("Pot has been emptied!");
         OnPotCleared?.Invoke(this, EventArgs.Empty);
     }
 }
