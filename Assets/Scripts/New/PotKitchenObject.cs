@@ -10,6 +10,9 @@ public class PotKitchenObject : KitchenObject
         public KitchenObjectSO kitchenObjectSO;
     }
 
+    public event EventHandler OnPotCleared;
+
+
     [SerializeField] private List<KitchenObjectSO> validKitchenObjectSOList;
     [SerializeField] private List<BoilingRecipeSO> boilingRecipeSOList;
     [SerializeField] private PotCompleteVisual potCompleteVisual;
@@ -22,7 +25,6 @@ public class PotKitchenObject : KitchenObject
     {
         kitchenObjectSOList = new List<KitchenObjectSO>();
     }
-
 
     public List<KitchenObjectSO> GetKitchenObjectSOList()
     {
@@ -76,7 +78,7 @@ public class PotKitchenObject : KitchenObject
         }
 
         kitchenObjectSOList = newIngredients;
-        Debug.Log("Pot ingredients cooked!");
+        //Debug.Log("Pot ingredients cooked!");
     }
 
 
@@ -88,5 +90,13 @@ public class PotKitchenObject : KitchenObject
         }
 
         return null;
+    }
+
+    /// Clear all ingredients from the pot (used when player takes them with a bowl)
+    public void ClearKitchenObjects()
+    {
+        kitchenObjectSOList.Clear();
+        Debug.Log("Pot has been emptied!");
+        OnPotCleared?.Invoke(this, EventArgs.Empty);
     }
 }

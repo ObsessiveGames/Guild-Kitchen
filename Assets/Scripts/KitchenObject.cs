@@ -71,6 +71,20 @@ public class KitchenObject : MonoBehaviour
         }
     }
 
+    public bool TryGetBowl(out BowlKitchenObject bowlKitchenObject)
+    {
+        if (this is BowlKitchenObject bowl)
+        {
+            bowlKitchenObject = bowl;
+            return true;
+        }
+        else
+        {
+            bowlKitchenObject = null;
+            return false;
+        }
+    }
+
 
     public static KitchenObject SpawnKitchenObject(KitchenObjectSO kitchenObjectSO, IKitchenObjectParent kitchenObjectParent)
     {

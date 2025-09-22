@@ -456,6 +456,7 @@ MonoBehaviour:
   boilingRecipeSOList:
   - {fileID: 11400000, guid: 0fe53d730786565449dd1dce9afbf453, type: 2}
   - {fileID: 11400000, guid: abda032f21b60ab4199bc1e38b5a01d2, type: 2}
+  - {fileID: 11400000, guid: 8d62589e50d228c45b01d9e1d2f62f19, type: 2}
   potCompleteVisual: {fileID: 1896910260526107194}
 --- !u!1001 &47673716899181441
 PrefabInstance:
@@ -640,6 +641,12 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2197691109809933466}
     m_Modifications:
+    - target: {fileID: 4634284271485031211, guid: 5c78ed669d0db324ead3c64a6aa5da70,
+        type: 3}
+      propertyPath: kitchenObjectSO
+      value: 
+      objectReference: {fileID: 11400000, guid: 5a29cf6b86ae08246b3db9fcf63eeca5,
+        type: 2}
     - target: {fileID: 6463910788594160268, guid: 5c78ed669d0db324ead3c64a6aa5da70,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -1075,6 +1082,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 45
       objectReference: {fileID: 0}
+    - target: {fileID: 8172256031379964326, guid: 16bc89530a744cf4a835e897c0275116,
+        type: 3}
+      propertyPath: kitchenObjectSO
+      value: 
+      objectReference: {fileID: 11400000, guid: efd686bb59afca14dab805ed32a7efcd,
+        type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2846,6 +2859,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 45
       objectReference: {fileID: 0}
+    - target: {fileID: 8172256031379964326, guid: 8d88ced81ee50334bad020706659f208,
+        type: 3}
+      propertyPath: kitchenObjectSO
+      value: 
+      objectReference: {fileID: 11400000, guid: 8c1ab7651fee1544caca1c7ac8fc92e5,
+        type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2871,6 +2890,12 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2197691109809933466}
     m_Modifications:
+    - target: {fileID: 4634284271485031211, guid: f4b5d547e3e92454e88e8b2a5d2eaae4,
+        type: 3}
+      propertyPath: kitchenObjectSO
+      value: 
+      objectReference: {fileID: 11400000, guid: 0fe693c4dbcc398469b11efb7e3190b6,
+        type: 2}
     - target: {fileID: 6463910788594160268, guid: f4b5d547e3e92454e88e8b2a5d2eaae4,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -3561,6 +3586,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: SteakBurned
       objectReference: {fileID: 0}
+    - target: {fileID: 5954508694304021167, guid: 1036100f30aa6f14d9416029127b8ec0,
+        type: 3}
+      propertyPath: kitchenObjectSO
+      value: 
+      objectReference: {fileID: 11400000, guid: 86fc862d00ea85f45baf0a142ac808cf,
+        type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3586,6 +3617,12 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2197691109809933466}
     m_Modifications:
+    - target: {fileID: 4634284271485031211, guid: eaa90e6455f07b745ac94a7f9cc42434,
+        type: 3}
+      propertyPath: kitchenObjectSO
+      value: 
+      objectReference: {fileID: 11400000, guid: 11587715bbf7cc44e9c486320fdc8d14,
+        type: 2}
     - target: {fileID: 6463910788594160268, guid: eaa90e6455f07b745ac94a7f9cc42434,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -3771,6 +3808,12 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2197691109809933466}
     m_Modifications:
+    - target: {fileID: 4634284271485031211, guid: 9ebbad81de80f8c4993cd4d2b5e242a1,
+        type: 3}
+      propertyPath: kitchenObjectSO
+      value: 
+      objectReference: {fileID: 11400000, guid: c0985c7177cbdd942a7a25683027d32b,
+        type: 2}
     - target: {fileID: 6463910788594160268, guid: 9ebbad81de80f8c4993cd4d2b5e242a1,
         type: 3}
       propertyPath: m_LocalScale.x

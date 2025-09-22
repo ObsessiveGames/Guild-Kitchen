@@ -107,7 +107,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CutleryCounterVisual
   cutleryCounter: {fileID: 1596116056329873990}
   counterTopPoint: {fileID: 4667482432236469637}
-  cutleryVisualPrefab: {fileID: 6463910788594160268, guid: 82816363abe2da1418f71bf09fb1253d,
+  cutleryVisualPrefab: {fileID: 7262892183024080002, guid: afd01660fe954cf4ba4efdcd9da9b76e,
     type: 3}
 --- !u!4 &4568956689875184833 stripped
 Transform:

@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c884917dbeda9847b195d6a3d812992, type: 3}
   m_Name: Bowl
   m_EditorClassIdentifier: 
-  prefab: {fileID: 7262892183024080002, guid: 8794b499bb6a4c4418186f92b6e7b052, type: 3}
+  prefab: {fileID: 4600063576043754570, guid: d8571342c2bccaf408fe8b570d2632ab, type: 3}
   sprite: {fileID: 21300000, guid: a01087ce1455c7e4c8f2410c26afcfd2, type: 3}
   objectName: Bowl

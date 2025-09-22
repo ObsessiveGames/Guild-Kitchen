@@ -24,6 +24,9 @@ public class PotCompleteVisual : MonoBehaviour
     {
         potKitchenObject.OnIngredientAdded += PotKitchenObject_OnIngredientAdded;
 
+        // To clear visual after pot-to-bowl transfer
+        potKitchenObject.OnPotCleared += PotKitchenObject_OnPotCleared;
+
         foreach (KitchenObjectSO_GameObject kitchenObjectSOGameObject in kitchenObjectSOGameObjectList)
         {
             kitchenObjectSOGameObject.gameObject.SetActive(false);
@@ -61,5 +64,19 @@ public class PotCompleteVisual : MonoBehaviour
 
         if (rawGO != null) rawGO.SetActive(false);
         if (cookedGO != null) cookedGO.SetActive(true);
+    }
+
+    public List<KitchenObjectSO_GameObject> GetKitchenObjectSOGameObjectList()
+    {
+        return kitchenObjectSOGameObjectList;
+    }
+
+    private void PotKitchenObject_OnPotCleared(object sender, EventArgs e)
+    {
+        // SET ALL INGREDIENT VISUALS TO INACTIVE
+        foreach (KitchenObjectSO_GameObject kitchenObjectSOGameObject in kitchenObjectSOGameObjectList)
+        {
+            kitchenObjectSOGameObject.gameObject.SetActive(false);
+        }
     }
 }

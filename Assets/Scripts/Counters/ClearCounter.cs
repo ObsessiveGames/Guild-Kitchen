@@ -52,6 +52,30 @@ public class ClearCounter : BaseCounter
                         kitchenObjectOnCounter.DestroySelf();
                     }
                 }
+                else if (player.GetKitchenObject().TryGetBowl(out BowlKitchenObject bowlKitchenObject))
+                {
+                    // Player has a Bowl
+                    if (kitchenObjectOnCounter.TryGetPot(out PotKitchenObject potOnCounter))
+                    {
+                        // Transfer ingredients from Pot to Bowl
+                        bowlKitchenObject.CopyIngredientsFromPot(potOnCounter);
+                        // Clear the pot now that the Bowl has taken its contents
+                        potOnCounter.ClearKitchenObjects();
+
+                        // Optional: deactivate pot visuals if using PotCompleteVisual
+                        PotCompleteVisual potVisual = potOnCounter.GetComponent<PotCompleteVisual>();
+                        if (potVisual != null)
+                        {
+                            foreach (var pair in potVisual.GetKitchenObjectSOGameObjectList())
+                                pair.gameObject.SetActive(false);
+                        }
+
+                        //Debug.Log("Transferred Pot contents to Bowl!");
+
+                        // Optional: clear pot ingredients
+                        potOnCounter.SetKitchenObjects(new List<KitchenObjectSO>());
+                    }
+                }
 
                 else
                 {
@@ -67,7 +91,7 @@ public class ClearCounter : BaseCounter
                     }
                     else if (GetKitchenObject().TryGetPot(out PotKitchenObject potOnCounter))
                     {
-                        Debug.Log("counter is holding pot");
+                        //Debug.Log("counter is holding pot");
                         // Counter is holding a Pot
                         if (potOnCounter.TryAddIngredient(player.GetKitchenObject().GetKitchenObjectSO()))
                         {

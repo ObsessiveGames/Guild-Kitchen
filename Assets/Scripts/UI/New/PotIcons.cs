@@ -1,3 +1,5 @@
+using System;
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,6 +17,9 @@ public class PotIconsUI : MonoBehaviour
     private void Start()
     {
         potKitchenObject.OnIngredientAdded += PotKitchenObject_OnIngredientAdded;
+
+        // this is to clear Ingredients
+        potKitchenObject.OnPotCleared += PotKitchenObject_OnPotCleared;
     }
 
     private void PotKitchenObject_OnIngredientAdded(object sender, PotKitchenObject.OnIngredientAddedEventArgs e)
@@ -36,5 +41,10 @@ public class PotIconsUI : MonoBehaviour
             iconTransform.gameObject.SetActive(true);
             iconTransform.GetComponent<PotIconsSingleUI>().SetKitchenObjectSO(kitchenObjectSO);
         }
+    }
+
+    private void PotKitchenObject_OnPotCleared(object sender, EventArgs e)
+    {
+        UpdateVisual(); // refresh icons when pot is emptied
     }
 }

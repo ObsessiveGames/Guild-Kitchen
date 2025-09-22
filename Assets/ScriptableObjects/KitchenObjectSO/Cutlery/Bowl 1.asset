@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2c884917dbeda9847b195d6a3d812992, type: 3}
-  m_Name: PotUncooked
-  m_EditorClassIdentifier: 
-  prefab: {fileID: 6463910788594160268, guid: 82816363abe2da1418f71bf09fb1253d, type: 3}
-  sprite: {fileID: 21300000, guid: 114b0da55051c094b90c77403aff838e, type: 3}
-  objectName: PotUncooked
+  m_Name: Bowl 1
+  m_EditorClassIdentifier: Assembly-CSharp::KitchenObjectSO
+  prefab: {fileID: 0}
+  sprite: {fileID: 0}
+  objectName: 
