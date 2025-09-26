@@ -1,18 +1,57 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class PotionCounterSound : MonoBehaviour
 {
     [SerializeField] private PotionCounter potionCounter;
-    [SerializeField] private AudioClip potionAddSound;
-    [SerializeField] private AudioSource audioSource;
+
+    private AudioSource audioSource;
+    private float warningSoundTimer;
+    private bool playWarningSound;
+
+    private void Awake()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
 
     private void Start()
     {
-        potionCounter.OnPotionAdded += PotionCounter_OnPotionAdded;
+        potionCounter.OnStateChanged += PotionCounter_OnStateChanged;
+        potionCounter.OnProgressChanged += PotionCounter_OnProgressChanged;
     }
 
-    private void PotionCounter_OnPotionAdded(object sender, System.EventArgs e)
+    private void Update()
     {
-        audioSource.PlayOneShot(potionAddSound);
+        if (playWarningSound)
+        {
+            warningSoundTimer -= Time.deltaTime;
+            if (warningSoundTimer <= 0f)
+            {
+                float warningSoundTimerMax = .2f;
+                warningSoundTimer = warningSoundTimerMax;
+
+                SoundManager.Instance.PlayWarningSound(potionCounter.transform.position);
+            }
+        }
+    }
+
+    private void PotionCounter_OnProgressChanged(object sender, IHasProgress.OnProgressChangedEventArgs e)
+    {
+        float burnShowProgressAmount = .5f;
+        playWarningSound = potionCounter.IsBrewed() && e.progressNormalized >= burnShowProgressAmount;
+    }
+
+    private void PotionCounter_OnStateChanged(object sender, PotionCounter.OnStateChangedEventArgs e)
+    {
+        bool playSound = e.state == PotionCounter.State.Brewing || e.state == PotionCounter.State.Brewed;
+        if (playSound)
+        {
+            audioSource.Play();
+        }
+        else
+        {
+            audioSource.Pause();
+        }
     }
 }

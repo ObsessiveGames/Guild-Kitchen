@@ -289,7 +289,7 @@ AudioSource:
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -384,8 +384,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PotionCounterSound
   potionCounter: {fileID: 6211508146966476780}
-  potionAddSound: {fileID: 8300000, guid: f24e099d404a6124e833d46006ce4633, type: 3}
-  audioSource: {fileID: 6222050940653367335}
 --- !u!1001 &1427110633331527903
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -533,6 +531,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_PROP_candle_interior_01
       objectReference: {fileID: 0}
+    - target: {fileID: 7747909160453924183, guid: 92438e9dc3088724489c3761e2ab970a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -672,7 +675,7 @@ PrefabInstance:
         type: 3}
       propertyPath: baseCounter
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 6211508146966476780}
     - target: {fileID: 649975016012944138, guid: 07b2e1b2a230916408091e06e86bd3d8,
         type: 3}
       propertyPath: visualGameObjectArray.Array.size

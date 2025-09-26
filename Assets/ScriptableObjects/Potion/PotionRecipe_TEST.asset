@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecfe61ca204d5ec4e99e50918ba4c73d, type: 3}
   m_Name: PotionRecipe_TEST
   m_EditorClassIdentifier: Assembly-CSharp::PotionRecipeSO
-  input: {fileID: 0}
-  output: {fileID: 0}
-  brewingTimeMax: 0
+  input: {fileID: 11400000, guid: 2100179e482118f419bcd6039efd24ee, type: 2}
+  output: {fileID: 11400000, guid: e0ca1e1f627fd1645a45f44efd25b143, type: 2}
+  brewingTimeMax: 3

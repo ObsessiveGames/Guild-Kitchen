@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c9a3784d3133924cae2abbd8037d188, type: 3}
   m_Name: OverBrewTEST
   m_EditorClassIdentifier: Assembly-CSharp::OverbrewRecipeSO
-  input: {fileID: 0}
-  output: {fileID: 0}
-  overbrewTimeMax: 0
+  input: {fileID: 11400000, guid: e0ca1e1f627fd1645a45f44efd25b143, type: 2}
+  output: {fileID: 11400000, guid: b60b07604a132cb4d84c15241d555956, type: 2}
+  overbrewTimeMax: 3
