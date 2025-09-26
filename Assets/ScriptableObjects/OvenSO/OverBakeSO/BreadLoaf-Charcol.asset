@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b490455e3cc9cec41b12d36ee2b73322, type: 3}
-  m_Name: Pie-PieBurnt
+  m_Name: BreadLoaf-Charcol
   m_EditorClassIdentifier: Assembly-CSharp::OverbakeRecipeSO
-  input: {fileID: 0}
-  output: {fileID: 0}
-  overbakeTimeMax: 0
+  input: {fileID: 11400000, guid: e0ca1e1f627fd1645a45f44efd25b143, type: 2}
+  output: {fileID: 11400000, guid: b60b07604a132cb4d84c15241d555956, type: 2}
+  overbakeTimeMax: 5

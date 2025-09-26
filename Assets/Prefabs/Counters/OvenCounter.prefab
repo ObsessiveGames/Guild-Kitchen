@@ -105,17 +105,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7216792780705556984}
-  m_LocalRotation: {x: -0, y: 0.7071066, z: 0, w: -0.707107}
-  m_LocalPosition: {x: 0, y: 0, z: 6.0416727}
+  m_LocalRotation: {x: -0, y: 0.99995977, z: 0, w: -0.008976385}
+  m_LocalPosition: {x: 0, y: 0, z: 0.757}
   m_LocalScale: {x: 1.0416667, y: 1, z: 1.0204082}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6983870003735214145}
   m_Father: {fileID: 4742044048827836071}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -178.971, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -7.6418257, y: 3}
+  m_AnchoredPosition: {x: 0, y: 2.337}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &3378898941539889058
@@ -240,6 +240,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac6fdf1e0fa2ffb41a42c19c5a45c690, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OvenBurnWarningUI
+  ovenCounter: {fileID: 7266505516235438242}
 --- !u!1 &8778721981945602332
 GameObject:
   m_ObjectHideFlags: 0
@@ -382,6 +383,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f1d4308627f76d45a737116960da763, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OvenCounterSound
+  ovenCounter: {fileID: 7266505516235438242}
 --- !u!1001 &659000970666004960
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -453,7 +455,7 @@ PrefabInstance:
     - target: {fileID: 5885019801630137171, guid: 482be75cf4b094a44afc34f454cdb29c,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2
+      value: 0.757
       objectReference: {fileID: 0}
     - target: {fileID: 5885019801630137171, guid: 482be75cf4b094a44afc34f454cdb29c,
         type: 3}
@@ -478,12 +480,12 @@ PrefabInstance:
     - target: {fileID: 5885019801630137171, guid: 482be75cf4b094a44afc34f454cdb29c,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 7.011
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5885019801630137171, guid: 482be75cf4b094a44afc34f454cdb29c,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 2.54
+      value: 1.877
       objectReference: {fileID: 0}
     - target: {fileID: 5885019801630137171, guid: 482be75cf4b094a44afc34f454cdb29c,
         type: 3}
@@ -504,6 +506,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ProgressBarUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 6954885452198734054, guid: 482be75cf4b094a44afc34f454cdb29c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6963550174081300457, guid: 482be75cf4b094a44afc34f454cdb29c,
         type: 3}
@@ -584,6 +591,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0705d4febd9b634face7e4a9bb54a5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OvenBurnFlashingBarUI
+  ovenCounter: {fileID: 7266505516235438242}
 --- !u!1001 &821710903669390837
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -771,6 +779,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: OvenCounter
       objectReference: {fileID: 0}
+    - target: {fileID: 5709046874296916814, guid: 4e1aa29dc583d734f96f9eb02864096d,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5709046874296916815, guid: 4e1aa29dc583d734f96f9eb02864096d,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -837,10 +850,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5709046874296916815, guid: 4e1aa29dc583d734f96f9eb02864096d,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 4085869912275495313}
-    - targetCorrespondingSourceObject: {fileID: 5709046874296916815, guid: 4e1aa29dc583d734f96f9eb02864096d,
-        type: 3}
-      insertIndex: -1
       addedObject: {fileID: 6755993473596659473}
     - targetCorrespondingSourceObject: {fileID: 5709046874296916815, guid: 4e1aa29dc583d734f96f9eb02864096d,
         type: 3}
@@ -854,6 +863,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1124725381246005072}
+    - targetCorrespondingSourceObject: {fileID: 5395554102680090753, guid: 4e1aa29dc583d734f96f9eb02864096d,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4085869912275495313}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 5709046874296916809, guid: 4e1aa29dc583d734f96f9eb02864096d,
         type: 3}
@@ -878,9 +891,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adf68903106f3384f8050ae5ed427650, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OvenCounter
+  counterTopPoint: {fileID: 4905932702685005161}
+  bakingRecipeSOArray:
+  - {fileID: 11400000, guid: ff7ad2ae84d6f274dbd596a8654d1b52, type: 2}
+  overbakeRecipeSOArray:
+  - {fileID: 11400000, guid: 4511731bcf65d114bbd324cdc1470dc0, type: 2}
 --- !u!4 &4742044048827836071 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5709046874296916815, guid: 4e1aa29dc583d734f96f9eb02864096d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1077912900735532520}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &4905932702685005161 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5395554102680090753, guid: 4e1aa29dc583d734f96f9eb02864096d,
     type: 3}
   m_PrefabInstance: {fileID: 1077912900735532520}
   m_PrefabAsset: {fileID: 0}
@@ -972,6 +996,11 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 9020274034660805730, guid: 4b06b20af22c00249973f589df37aa16,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -1009,7 +1038,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03e2436108ca8a74f9d1075feabd1841, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SelectedCounterVisual
-  baseCounter: {fileID: 0}
+  baseCounter: {fileID: 7266505516235438242}
   visualGameObjectArray:
   - {fileID: 3880535019540070517}
 --- !u!1001 &4045032993745595726
@@ -1090,9 +1119,34 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_PROP_woodlogs_interior
       objectReference: {fileID: 0}
+    - target: {fileID: 4520808894722817408, guid: 60f22d98d2f0f8a44bb395712df14911,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5309143485470806845, guid: 60f22d98d2f0f8a44bb395712df14911,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6495490566994932061, guid: 60f22d98d2f0f8a44bb395712df14911,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7645118640056771796, guid: 60f22d98d2f0f8a44bb395712df14911,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8010850560164448059, guid: 60f22d98d2f0f8a44bb395712df14911,
         type: 3}
       propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8939633310602260765, guid: 60f22d98d2f0f8a44bb395712df14911,
+        type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1107,6 +1161,12 @@ PrefabInstance:
 --- !u!4 &3514112244126786269 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 641334567482412947, guid: 60f22d98d2f0f8a44bb395712df14911,
+    type: 3}
+  m_PrefabInstance: {fileID: 4045032993745595726}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5925104293223713178 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7645118640056771796, guid: 60f22d98d2f0f8a44bb395712df14911,
     type: 3}
   m_PrefabInstance: {fileID: 4045032993745595726}
   m_PrefabAsset: {fileID: 0}
@@ -1145,33 +1205,44 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_RenderingLayers: 1
   m_ShadowRenderingLayers: 1
+--- !u!1 &8182765427892551283 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5309143485470806845, guid: 60f22d98d2f0f8a44bb395712df14911,
+    type: 3}
+  m_PrefabInstance: {fileID: 4045032993745595726}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5943130567299822396
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 4742044048827836071}
+    m_TransformParent: {fileID: 4905932702685005161}
     m_Modifications:
     - target: {fileID: 6670544709256882366, guid: 4b06b20af22c00249973f589df37aa16,
         type: 3}
       propertyPath: m_Name
       value: OvenCounter_Visual
       objectReference: {fileID: 0}
+    - target: {fileID: 6670544709256882366, guid: 4b06b20af22c00249973f589df37aa16,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7694911007596534445, guid: 4b06b20af22c00249973f589df37aa16,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.049
       objectReference: {fileID: 0}
     - target: {fileID: 7694911007596534445, guid: 4b06b20af22c00249973f589df37aa16,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.854
       objectReference: {fileID: 0}
     - target: {fileID: 7694911007596534445, guid: 4b06b20af22c00249973f589df37aa16,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.33
       objectReference: {fileID: 0}
     - target: {fileID: 7694911007596534445, guid: 4b06b20af22c00249973f589df37aa16,
         type: 3}
@@ -1181,17 +1252,17 @@ PrefabInstance:
     - target: {fileID: 7694911007596534445, guid: 4b06b20af22c00249973f589df37aa16,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7694911007596534445, guid: 4b06b20af22c00249973f589df37aa16,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7694911007596534445, guid: 4b06b20af22c00249973f589df37aa16,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7694911007596534445, guid: 4b06b20af22c00249973f589df37aa16,
         type: 3}
@@ -1208,7 +1279,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 9020274034660805730, guid: 4b06b20af22c00249973f589df37aa16,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 9020274034660805730, guid: 4b06b20af22c00249973f589df37aa16, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 7694911007596534445, guid: 4b06b20af22c00249973f589df37aa16,
@@ -1239,6 +1316,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9c9aa3bca5339c4ca0dc30020e06272, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OvenCounter_Visual
+  ovenCounter: {fileID: 7266505516235438242}
+  ovenOnGameObject: {fileID: 5925104293223713178}
+  particlesGameObject: {fileID: 8182765427892551283}
 --- !u!4 &4085869912275495313 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7694911007596534445, guid: 4b06b20af22c00249973f589df37aa16,

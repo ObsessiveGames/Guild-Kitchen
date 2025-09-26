@@ -2,15 +2,35 @@ using UnityEngine;
 
 public class OvenBurnFlashingBarUI : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private const string IS_FLASHING = "IsFlashing";
+
+    [SerializeField] private OvenCounter ovenCounter;
+
+    private Animator animator;
+
+    private void Awake()
     {
-        
+        animator = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        
+        if (ovenCounter == null)
+        {
+            Debug.LogError("OvenCounter reference is missing!");
+            return;
+        }
+
+        ovenCounter.OnProgressChanged += OvenCounter_OnProgressChanged;
+
+        animator.SetBool(IS_FLASHING, false);
+    }
+
+    private void OvenCounter_OnProgressChanged(object sender, IHasProgress.OnProgressChangedEventArgs e)
+    {
+        float burnShowProgressAmount = 0.5f;
+        bool show = ovenCounter.IsBaked() && e.progressNormalized >= burnShowProgressAmount;
+
+        animator.SetBool(IS_FLASHING, show);
     }
 }

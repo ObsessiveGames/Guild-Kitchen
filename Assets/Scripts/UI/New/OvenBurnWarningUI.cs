@@ -2,15 +2,37 @@ using UnityEngine;
 
 public class OvenBurnWarningUI : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [SerializeField] private OvenCounter ovenCounter;
+
+    private void Start()
     {
-        
+        ovenCounter.OnProgressChanged += OvenCounter_OnProgressChanged;
+
+        Hide();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OvenCounter_OnProgressChanged(object sender, IHasProgress.OnProgressChangedEventArgs e)
     {
-        
+        float burnShowProgressAmount = .5f;
+        bool show = ovenCounter.IsBaked() && e.progressNormalized >= burnShowProgressAmount;
+
+        if (show)
+        {
+            Show();
+        }
+        else
+        {
+            Hide();
+        }
+    }
+
+    private void Show()
+    {
+        gameObject.SetActive(true);
+    }
+
+    private void Hide()
+    {
+        gameObject.SetActive(false);
     }
 }

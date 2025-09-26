@@ -1,16 +1,23 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class OvenCounter_Visual : MonoBehaviour
+public class OvenCounterVisual : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [SerializeField] private OvenCounter ovenCounter;
+    [SerializeField] private GameObject ovenOnGameObject;
+    [SerializeField] private GameObject particlesGameObject;
+
+    private void Start()
     {
-        
+        ovenCounter.OnStateChanged += OvenCounter_OnStateChanged;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OvenCounter_OnStateChanged(object sender, OvenCounter.OnStateChangedEventArgs e)
     {
-        
+        // Show visual while baking or baked (until overbaked)
+        bool showVisual = e.state == OvenCounter.State.Baking || e.state == OvenCounter.State.Baked;
+        ovenOnGameObject.SetActive(showVisual);
+        particlesGameObject.SetActive(showVisual);
     }
 }
