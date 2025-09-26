@@ -1,27 +1,30 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class ProgressBarUI : MonoBehaviour
 {
-    [SerializeField] private GameObject hasProgressGameObject;
     [SerializeField] private Image barImage;
 
     private IHasProgress hasProgress;
 
-    private void Start()
+    private void Awake()
     {
-        hasProgress = hasProgressGameObject.GetComponent<IHasProgress>();
+        // Try to find IHasProgress on the same GameObject or parent
+        hasProgress = GetComponentInParent<IHasProgress>();
         if (hasProgress == null)
         {
-            Debug.LogError("GameObject " + hasProgressGameObject + " does not have a component that implements IHasProgress!");
+            Debug.LogError("No IHasProgress component found in parent of " + gameObject.name);
+        }
+    }
+
+    private void Start()
+    {
+        if (hasProgress != null)
+        {
+            hasProgress.OnProgressChanged += HasProgress_OnProgressChanged;
         }
 
-        hasProgress.OnProgressChanged += HasProgress_OnProgressChanged;
-
         barImage.fillAmount = 0f;
-
         Hide();
     }
 

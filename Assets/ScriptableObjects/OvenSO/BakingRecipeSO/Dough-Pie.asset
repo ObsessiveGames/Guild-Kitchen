@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BakingRecipeSO
   input: {fileID: 11400000, guid: 12fadafd6c5d6d14ca9a770ab075a807, type: 2}
   output: {fileID: 11400000, guid: e0ca1e1f627fd1645a45f44efd25b143, type: 2}
-  bakingTimeMax: 3
+  bakingTimeMax: 9
