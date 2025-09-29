@@ -76,6 +76,32 @@ public class ClearCounter : BaseCounter
                         potOnCounter.SetKitchenObjects(new List<KitchenObjectSO>());
                     }
                 }
+                else if (player.GetKitchenObject().TryGetPot(out PotKitchenObject potInHand))
+                {
+                    // Player is holding a Pot
+                    if (GetKitchenObject().TryGetBowl(out BowlKitchenObject bowlOnCounter))
+                    {
+                        // Counter has a Bowl
+                        if (potInHand.GetKitchenObjectSOList().Count > 0)
+                        {
+                            // Transfer ingredients from Pot to Bowl
+                            bowlOnCounter.CopyIngredientsFromPot(potInHand);
+
+                            // Clear the Pot now that its contents are in the Bowl
+                            potInHand.ClearKitchenObjects();
+
+                            // Optional: clear visuals for the Pot
+                            PotCompleteVisual potVisual = potInHand.GetComponent<PotCompleteVisual>();
+                            if (potVisual != null)
+                            {
+                                foreach (var pair in potVisual.GetKitchenObjectSOGameObjectList())
+                                    pair.gameObject.SetActive(false);
+                            }
+
+                            Debug.Log("Transferred Pot contents to Bowl!");
+                        }
+                    }
+                }
 
                 else
                 {

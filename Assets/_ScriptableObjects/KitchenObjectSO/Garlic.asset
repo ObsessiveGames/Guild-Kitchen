@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Garlic
   m_EditorClassIdentifier: 
   prefab: {fileID: 4119054333961309592, guid: 3891432fcfa70614ba3b97ecd2a25352, type: 3}
-  sprite: {fileID: 21300000, guid: a01087ce1455c7e4c8f2410c26afcfd2, type: 3}
+  sprite: {fileID: 21300000, guid: b37ac94df89243149a1599db83673210, type: 3}
   objectName: Garlic

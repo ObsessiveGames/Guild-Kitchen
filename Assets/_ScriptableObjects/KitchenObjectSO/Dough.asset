@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Dough
   m_EditorClassIdentifier: 
   prefab: {fileID: 8945241831085586240, guid: e893641d3c5660346864702ca3e8048b, type: 3}
-  sprite: {fileID: 21300000, guid: a01087ce1455c7e4c8f2410c26afcfd2, type: 3}
+  sprite: {fileID: 21300000, guid: 75bb0ceb32b95fe4eb80f9ad449c96f4, type: 3}
   objectName: Dough

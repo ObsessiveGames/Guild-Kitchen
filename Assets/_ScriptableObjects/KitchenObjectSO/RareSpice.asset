@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: RareSpice
   m_EditorClassIdentifier: 
   prefab: {fileID: 4119054333961309592, guid: 2b84c3a8b1a631d4591ecc4d012b6623, type: 3}
-  sprite: {fileID: 21300000, guid: a01087ce1455c7e4c8f2410c26afcfd2, type: 3}
+  sprite: {fileID: 21300000, guid: 99a61efc9a8a55147a81b72d51b6e0eb, type: 3}
   objectName: RareSpice
