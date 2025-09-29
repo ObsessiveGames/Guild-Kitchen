@@ -22,7 +22,10 @@ public class BowlKitchenObject : KitchenObject
     /// Copy ingredients from Pot (called by BowlCompleteVisual)
     public void CopyIngredientsFromPot(PotKitchenObject pot)
     {
-        if (pot == null || ingredientsCopied) return; // <- exit if already copied
+        if (pot == null || ingredientsCopied)
+        {
+            return;
+        }
 
         kitchenObjectSOList = new List<KitchenObjectSO>(pot.GetKitchenObjectSOList());
         ingredientsCopied = true; // <- mark as copied
@@ -34,7 +37,6 @@ public class BowlKitchenObject : KitchenObject
 
         // Debug: Show how many and which ingredients were copied
         string ingredientNames = string.Join(", ", kitchenObjectSOList.ConvertAll(i => i.name));
-        Debug.Log($"[BowlKitchenObject] Copied {kitchenObjectSOList.Count} ingredients: {ingredientNames}");
     }
 
     public List<KitchenObjectSO> GetKitchenObjectSOList()
