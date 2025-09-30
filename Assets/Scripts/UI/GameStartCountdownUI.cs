@@ -5,57 +5,57 @@ using UnityEngine;
 
 public class GameStartCountdownUI : MonoBehaviour
 {
-    private const string NUMBER_POPUP = "NumberPopup";
+private const string NUMBER_POPUP = "NumberPopup";
 
-    [SerializeField] private TextMeshProUGUI countdownText;
+[SerializeField] private TextMeshProUGUI countdownText;
 
-    private Animator animator;
-    private int previousCountdownNumber;
+private Animator animator;
+private int previousCountdownNumber;
 
-    private void Awake()
+private void Awake()
+{
+    animator = GetComponent<Animator>();
+}
+
+private void Start()
+{
+    KitchenGameManager.Instance.OnStateChanged += KitchenGameManager_OnStateChanged;
+
+    Hide();
+}
+
+private void Update()
+{
+    int countdownNumber = Mathf.CeilToInt(KitchenGameManager.Instance.GetCountdownToStartTimer());
+    countdownText.text = countdownNumber.ToString();
+
+    if (previousCountdownNumber != countdownNumber)
     {
-        animator = GetComponent<Animator>();
+        previousCountdownNumber = countdownNumber;
+        animator.SetTrigger(NUMBER_POPUP);
+        SoundManager.Instance.PlayCountdownSound();
     }
+}
 
-    private void Start()
+private void KitchenGameManager_OnStateChanged(object sender, System.EventArgs e)
+{
+    if (KitchenGameManager.Instance.IsCountdownToStartActive())
     {
-        KitchenGameManager.Instance.OnStateChanged += KitchenGameManager_OnStateChanged;
-
+        Show();
+    }
+    else
+    {
         Hide();
     }
+}
 
-    private void Update()
-    {
-        int countdownNumber = Mathf.CeilToInt(KitchenGameManager.Instance.GetCountdownToStartTimer());
-        countdownText.text = countdownNumber.ToString();
+private void Show()
+{
+    gameObject.SetActive(true);
+}
 
-        if (previousCountdownNumber != countdownNumber)
-        {
-            previousCountdownNumber = countdownNumber;
-            animator.SetTrigger(NUMBER_POPUP);
-            SoundManager.Instance.PlayCountdownSound();
-        }
-    }
-
-    private void KitchenGameManager_OnStateChanged(object sender, System.EventArgs e)
-    {
-        if (KitchenGameManager.Instance.IsCountdownToStartActive())
-        {
-            Show();
-        }
-        else
-        {
-            Hide();
-        }
-    }
-
-    private void Show()
-    {
-        gameObject.SetActive(true);
-    }
-
-    private void Hide()
-    {
-        gameObject.SetActive(false);
-    }
+private void Hide()
+{
+    gameObject.SetActive(false);
+}
 }

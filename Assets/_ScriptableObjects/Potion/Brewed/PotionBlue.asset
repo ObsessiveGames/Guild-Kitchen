@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecfe61ca204d5ec4e99e50918ba4c73d, type: 3}
+  m_Name: PotionBlue
+  m_EditorClassIdentifier: Assembly-CSharp::PotionRecipeSO
+  inputList:
+  - {fileID: 11400000, guid: 21364a24c341d264db5200875e0215bf, type: 2}
+  - {fileID: 11400000, guid: 804f543e91db70a469b3ebe71fd0c587, type: 2}
+  output: {fileID: 11400000, guid: c4f4789d2f7c70848b0c612073daf193, type: 2}
+  brewingTimeMax: 5
+  recipeName: BluePotion
