@@ -143,6 +143,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: PotCounter
       objectReference: {fileID: 0}
+    - target: {fileID: 5709046874296916814, guid: 4e1aa29dc583d734f96f9eb02864096d,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 1.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 5709046874296916814, guid: 4e1aa29dc583d734f96f9eb02864096d,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 1.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 5709046874296916814, guid: 4e1aa29dc583d734f96f9eb02864096d,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 0.63
+      objectReference: {fileID: 0}
     - target: {fileID: 5709046874296916815, guid: 4e1aa29dc583d734f96f9eb02864096d,
         type: 3}
       propertyPath: m_RootOrder

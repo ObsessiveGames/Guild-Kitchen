@@ -1,13 +1,13 @@
 using System.Collections;
-using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Onomatopoeia : MonoBehaviour
 {
     private const string POPUP_TRIGGER = "NumberPopup";
 
-    [SerializeField] private TextMeshProUGUI boomText;
+    [SerializeField] private Image boomImage; // Replace TextMeshProUGUI with Image
+    [SerializeField] private Sprite boomSprite; // Optional: assign a sprite for "BOOM"
 
     private Animator animator;
 
@@ -18,16 +18,17 @@ public class Onomatopoeia : MonoBehaviour
     }
 
     /// <summary>
-    /// Call this method to display "BOOM", play the animation, and then hide.
+    /// Call this method to display the image, play the animation, and then hide.
     /// </summary>
     public void Boom()
     {
         // Activate first
         Show();
 
-        if (boomText != null)
+        if (boomImage != null && boomSprite != null)
         {
-            boomText.text = "BOOM";
+            boomImage.sprite = boomSprite; // Set the image to the desired sprite
+            boomImage.enabled = true; // Make sure the image is visible
         }
 
         if (animator != null)
@@ -38,7 +39,6 @@ public class Onomatopoeia : MonoBehaviour
         // Start coroutine after object is active
         StartCoroutine(HideAfterAnimation());
     }
-
 
     private IEnumerator HideAfterAnimation()
     {
@@ -58,10 +58,18 @@ public class Onomatopoeia : MonoBehaviour
     private void Show()
     {
         gameObject.SetActive(true);
+        if (boomImage != null)
+        {
+            boomImage.enabled = true;
+        }
     }
 
     private void Hide()
     {
+        if (boomImage != null)
+        {
+            boomImage.enabled = false;
+        }
         gameObject.SetActive(false);
     }
 }

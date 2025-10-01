@@ -5,9 +5,9 @@ using UnityEngine;
 
 public class PotionCounter : BaseCounter, IHasProgress
 {
-    public event EventHandler<IHasProgress.OnProgressChangedEventArgs> OnProgressChanged;
+    public event EventHandler<IHasProgress.OnProgressChangedEventArgs> OnProgressChanged; // used by progress bars
     public event EventHandler<OnStateChangedEventArgs> OnStateChanged;
-    public event EventHandler OnPotionAdded;
+    public event EventHandler OnPotionAdded; // fired after a succefull potion is brewed
 
     public class OnStateChangedEventArgs : EventArgs
     {

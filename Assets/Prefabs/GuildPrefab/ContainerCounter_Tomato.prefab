@@ -148,6 +148,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2695078238572422181, guid: c607700b9aea89c4fb5421681548ce35,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 1.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 2695078238572422181, guid: c607700b9aea89c4fb5421681548ce35,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 1.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 2695078238572422181, guid: c607700b9aea89c4fb5421681548ce35,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 1.32
+      objectReference: {fileID: 0}
     - target: {fileID: 2875953862017915812, guid: c607700b9aea89c4fb5421681548ce35,
         type: 3}
       propertyPath: kitchenObjectSO

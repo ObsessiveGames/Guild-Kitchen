@@ -15,7 +15,7 @@ MonoBehaviour:
   active: 1
   mode:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 2
   neutralHDRRangeReductionMode:
     m_OverrideState: 0
     m_Value: 2
@@ -58,16 +58,16 @@ MonoBehaviour:
     m_Value: 0
   contrast:
     m_OverrideState: 1
-    m_Value: 20
+    m_Value: 0
   colorFilter:
     m_OverrideState: 0
     m_Value: {r: 0.7924528, g: 0.7924528, b: 0.7924528, a: 1}
   hueShift:
     m_OverrideState: 0
-    m_Value: 0
+    m_Value: -16
   saturation:
     m_OverrideState: 1
-    m_Value: 20
+    m_Value: 0
 --- !u!114 &-950163568278247506
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -86,10 +86,10 @@ MonoBehaviour:
     m_Value: 1
   threshold:
     m_OverrideState: 1
-    m_Value: 0.95
+    m_Value: 0.82
   intensity:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 0.1
   scatter:
     m_OverrideState: 0
     m_Value: 0.7
@@ -125,7 +125,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d7fd9488000d3734a9e00ee676215985, type: 3}
-  m_Name: Global Volume Profile
+  m_Name: Global Volume Profile 2
   m_EditorClassIdentifier: 
   components:
   - {fileID: -4368805565498062432}
@@ -153,7 +153,7 @@ MonoBehaviour:
     m_Value: {x: 0.5, y: 0.5}
   intensity:
     m_OverrideState: 1
-    m_Value: 0.25
+    m_Value: 0.491
   smoothness:
     m_OverrideState: 1
     m_Value: 0.4
