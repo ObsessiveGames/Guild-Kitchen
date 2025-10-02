@@ -34,7 +34,7 @@ public class BowlKitchenObject : KitchenObject
 
         // Debug: Show how many and which ingredients were copied
         string ingredientNames = string.Join(", ", kitchenObjectSOList.ConvertAll(i => i.name));
-        Debug.Log($"Bowl copied ingredients: {ingredientNames}");
+        //Debug.Log($"Bowl copied ingredients: {ingredientNames}");
     }
 
 
