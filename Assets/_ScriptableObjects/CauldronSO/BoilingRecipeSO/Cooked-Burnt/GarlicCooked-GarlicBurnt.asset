@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05ef3979e92b46f4bbfa70e9805395fb, type: 3}
+  m_Name: GarlicCooked-GarlicBurnt
+  m_EditorClassIdentifier: Assembly-CSharp::BoilingRecipeSO
+  input: {fileID: 11400000, guid: 8efe444913c0f9b41a6b08893864b845, type: 2}
+  output: {fileID: 11400000, guid: 368b0226502f38e4a8f0e0d98f87efff, type: 2}
+  boilingTimeMax: 5

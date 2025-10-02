@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 4119054333961309592}
   - component: {fileID: 1260366770693954759}
   - component: {fileID: 154671632243715094}
-  - component: {fileID: 6829952622917015309}
+  - component: {fileID: -1548388081261375484}
   m_Layer: 0
-  m_Name: Garlic
+  m_Name: GarlicBurnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -90,7 +90,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &6829952622917015309
+--- !u!114 &-1548388081261375484
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -99,7 +99,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 3395025731658896522}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f406727b4c8e9240be17d25d3954cd0, type: 3}
+  m_Script: {fileID: 11500000, guid: bd75aa2cd714b6f46990c705585b76c3, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::KitchenObject
-  kitchenObjectSO: {fileID: 11400000, guid: 402252c7c96927049984b25c8e044afd, type: 2}
+  m_EditorClassIdentifier: Assembly-CSharp::PlateKitchenObject
+  kitchenObjectSO: {fileID: 11400000, guid: 368b0226502f38e4a8f0e0d98f87efff, type: 2}
+  validKitchenObjectSOList: []

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: SteakCooked
   m_EditorClassIdentifier: 
   prefab: {fileID: 4179471067381427305, guid: 65f7c5cd7d436164b9829e461ab32c5c, type: 3}
-  sprite: {fileID: 21300000, guid: a01087ce1455c7e4c8f2410c26afcfd2, type: 3}
+  sprite: {fileID: 21300000, guid: afb48d3454436e345b11c14c67cd66b4, type: 3}
   objectName: SteakCooked

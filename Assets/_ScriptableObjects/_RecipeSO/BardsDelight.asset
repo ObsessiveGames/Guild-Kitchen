@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ae5e2a31f91699d4b8fa75670ec6c67d, type: 3}
-  m_Name: HuntersPie
+  m_Name: BardsDelight
   m_EditorClassIdentifier: 
   kitchenObjectSOList:
-  - {fileID: 11400000, guid: add7dba8490d6054592a7cdb12e2a739, type: 2}
-  - {fileID: 11400000, guid: 687b0b00072154a4c9a6cbcf0f41ee9b, type: 2}
-  - {fileID: 11400000, guid: f6979825af29df046819b3ec4cc942a4, type: 2}
-  recipeName: HuntersPie
+  - {fileID: 11400000, guid: 0fe693c4dbcc398469b11efb7e3190b6, type: 2}
+  - {fileID: 11400000, guid: e0ca1e1f627fd1645a45f44efd25b143, type: 2}
+  - {fileID: 11400000, guid: ae3faf0c18877d64fa672c7639ecd716, type: 2}
+  recipeName: BardsDelight

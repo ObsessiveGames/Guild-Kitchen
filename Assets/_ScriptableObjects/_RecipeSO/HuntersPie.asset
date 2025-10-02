@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ae5e2a31f91699d4b8fa75670ec6c67d, type: 3}
-  m_Name: PeasantStew
+  m_Name: HuntersPie
   m_EditorClassIdentifier: 
   kitchenObjectSOList:
-  - {fileID: 11400000, guid: 9a1a49be6f5ea7344997e33017e54d77, type: 2}
-  - {fileID: 11400000, guid: 368e3e60902d66641910fb24f820be82, type: 2}
-  - {fileID: 11400000, guid: f8d34980229c021449a0867faab983ac, type: 2}
-  recipeName: PeasantStew
+  - {fileID: 11400000, guid: abdb1f6d88bcb6341a13375e424a95b5, type: 2}
+  - {fileID: 11400000, guid: 687b0b00072154a4c9a6cbcf0f41ee9b, type: 2}
+  - {fileID: 11400000, guid: 5a29cf6b86ae08246b3db9fcf63eeca5, type: 2}
+  recipeName: HuntersPie

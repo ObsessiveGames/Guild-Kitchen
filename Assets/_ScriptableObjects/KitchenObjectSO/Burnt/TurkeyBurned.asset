@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: TurkeyBurned
   m_EditorClassIdentifier: 
   prefab: {fileID: 5657468385486825505, guid: 113148cb37a3fc34eb670d7f4cea0066, type: 3}
-  sprite: {fileID: 21300000, guid: a01087ce1455c7e4c8f2410c26afcfd2, type: 3}
+  sprite: {fileID: 21300000, guid: ff2e49f5d3754cf47a807540620eb2df, type: 3}
   objectName: TurkeyBurned

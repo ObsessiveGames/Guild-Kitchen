@@ -22,22 +22,21 @@ public class BowlKitchenObject : KitchenObject
     /// Copy ingredients from Pot (called by BowlCompleteVisual)
     public void CopyIngredientsFromPot(PotKitchenObject pot)
     {
-        if (pot == null || ingredientsCopied)
-        {
-            return;
-        }
+        if (pot == null) return;
 
-        kitchenObjectSOList = new List<KitchenObjectSO>(pot.GetKitchenObjectSOList());
-        ingredientsCopied = true; // <- mark as copied
-
-        foreach (var ingredient in kitchenObjectSOList)
+        foreach (var ingredient in pot.GetKitchenObjectSOList())
         {
+            kitchenObjectSOList.Add(ingredient);
+
+            // Notify visuals/UI
             OnIngredientAdded?.Invoke(this, new OnIngredientAddedEventArgs { kitchenObjectSO = ingredient });
         }
 
         // Debug: Show how many and which ingredients were copied
         string ingredientNames = string.Join(", ", kitchenObjectSOList.ConvertAll(i => i.name));
+        Debug.Log($"Bowl copied ingredients: {ingredientNames}");
     }
+
 
     public List<KitchenObjectSO> GetKitchenObjectSOList()
     {

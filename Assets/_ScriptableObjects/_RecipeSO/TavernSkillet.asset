@@ -10,12 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ae5e2a31f91699d4b8fa75670ec6c67d, type: 3}
-  m_Name: LegendaryStew
+  m_Name: TavernSkillet
   m_EditorClassIdentifier: 
   kitchenObjectSOList:
-  - {fileID: 11400000, guid: add7dba8490d6054592a7cdb12e2a739, type: 2}
   - {fileID: 11400000, guid: f8d34980229c021449a0867faab983ac, type: 2}
-  - {fileID: 11400000, guid: ef95ab2968d0dc44b81420a354baa632, type: 2}
-  - {fileID: 11400000, guid: ae3faf0c18877d64fa672c7639ecd716, type: 2}
-  - {fileID: 11400000, guid: 5fa33ac0b50014242981ccd1d746f53f, type: 2}
-  recipeName: LegendaryStew
+  - {fileID: 11400000, guid: 1d8c6717fb0dcab429ac804cc3e76965, type: 2}
+  - {fileID: 11400000, guid: 8efe444913c0f9b41a6b08893864b845, type: 2}
+  - {fileID: 11400000, guid: 289b5daa100d9d8429805f1f72f1511a, type: 2}
+  recipeName: TavernSkillet

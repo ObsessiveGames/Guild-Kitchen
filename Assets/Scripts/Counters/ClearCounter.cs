@@ -10,106 +10,113 @@ public class ClearCounter : BaseCounter
     {
         if (!HasKitchenObject())
         {
-            // There is no KitchenObject here
-            if (player.HasKitchenObject())
+            // No KitchenObject on counter
+            if (player != null && player.HasKitchenObject())
             {
-                // Player is carrying something
                 player.GetKitchenObject().SetKitchenObjectParent(this);
             }
-            else
-            {
-                // Player not carrying anything
-            }
+            return;
         }
-        else
-        {
-            // There is a KitchenObject here
-            KitchenObject kitchenObjectOnCounter = GetKitchenObject();
 
-            if (player.HasKitchenObject())
+        // Counter has a KitchenObject
+        KitchenObject kitchenObjectOnCounter = GetKitchenObject();
+
+        if (player != null && player.HasKitchenObject())
+        {
+            // --- PLAYER IS CARRYING SOMETHING ---
+            KitchenObject playerObject = player.GetKitchenObject();
+
+            // --- PLAYER HOLDS PLATE ---
+            if (playerObject.TryGetPlate(out PlateKitchenObject plateKitchenObject))
             {
-                // Player is carrying something
-                if (player.GetKitchenObject().TryGetPlate(out PlateKitchenObject plateKitchenObject))
+                if (kitchenObjectOnCounter != null && kitchenObjectOnCounter.GetKitchenObjectSO() != null)
                 {
-                    // Player is holding a Plate
-                    if (plateKitchenObject.TryAddIngredient(GetKitchenObject().GetKitchenObjectSO()))
+                    if (plateKitchenObject.TryAddIngredient(kitchenObjectOnCounter.GetKitchenObjectSO()))
                     {
-                        GetKitchenObject().DestroySelf();
+                        kitchenObjectOnCounter.DestroySelf();
                     }
                 }
-                else if (player.GetKitchenObject().TryGetPot(out PotKitchenObject potKitchenObject))
+                return;
+            }
+
+            // --- PLAYER HOLDS POT ---
+            if (playerObject.TryGetPot(out PotKitchenObject potKitchenObject))
+            {
+                // Pot (in hand) -> Bowl (on counter)
+                if (kitchenObjectOnCounter.TryGetBowl(out BowlKitchenObject bowlOnCounter))
                 {
-                    //Debug.Log("this is now a pot");
-                    // Player is holding a Pot
+                    if (potKitchenObject.GetKitchenObjectSOList().Count > 0)
+                    {
+                        bowlOnCounter.CopyIngredientsFromPot(potKitchenObject);
+                        potKitchenObject.ClearKitchenObjects();
+                    }
+                    return;
+                }
+
+                // Pot (in hand) <- Ingredient (on counter)
+                if (kitchenObjectOnCounter != null && kitchenObjectOnCounter.GetKitchenObjectSO() != null)
+                {
                     if (potKitchenObject.TryAddIngredient(kitchenObjectOnCounter.GetKitchenObjectSO()))
                     {
                         kitchenObjectOnCounter.DestroySelf();
                     }
                 }
-                else if (player.GetKitchenObject().TryGetBowl(out BowlKitchenObject bowlKitchenObject))
+                return;
+            }
+
+            // --- PLAYER HOLDS BOWL ---
+            if (playerObject.TryGetBowl(out BowlKitchenObject bowlKitchenObject))
+            {
+                // Bowl (in hand) <- Pot (on counter)
+                if (kitchenObjectOnCounter.TryGetPot(out PotKitchenObject potOnCounter))
                 {
-                    // Player has a Bowl
-                    if (kitchenObjectOnCounter.TryGetPot(out PotKitchenObject potOnCounter))
+                    if (potOnCounter.GetKitchenObjectSOList().Count > 0)
                     {
-                        // Transfer ingredients from Pot to Bowl
                         bowlKitchenObject.CopyIngredientsFromPot(potOnCounter);
-                        // Clear the pot now that the Bowl has taken its contents
                         potOnCounter.ClearKitchenObjects();
 
-                        // Optional: deactivate pot visuals if using PotCompleteVisual
+                        // Optional: disable pot visuals
                         PotCompleteVisual potVisual = potOnCounter.GetComponent<PotCompleteVisual>();
                         if (potVisual != null)
                         {
                             foreach (var pair in potVisual.GetKitchenObjectSOGameObjectList())
+                            {
                                 pair.gameObject.SetActive(false);
+                            }
                         }
 
-                        // Optional: clear pot ingredients
                         potOnCounter.SetKitchenObjects(new List<KitchenObjectSO>());
                     }
                 }
+                return;
+            }
 
-                // pot to bowl transfer
-                if (player.HasKitchenObject() && player.GetKitchenObject().TryGetPot(out PotKitchenObject potInHand))
-                {
-                    if (HasKitchenObject() && GetKitchenObject().TryGetBowl(out BowlKitchenObject bowlOnCounter))
-                    {
-                        // Optional: do your transfer logic here
-                        if (potInHand.GetKitchenObjectSOList().Count > 0)
-                        {
-                            bowlOnCounter.CopyIngredientsFromPot(potInHand);
-                            potInHand.ClearKitchenObjects();
-                        }
-                    }
-                }
-                else
-                {
-                    // Player is not carrying Plate but something else
-                    if (GetKitchenObject().TryGetPlate(out plateKitchenObject))
-                    {
-                        // Counter is holding a Plate
-                        if (plateKitchenObject.TryAddIngredient(player.GetKitchenObject().GetKitchenObjectSO()))
-                        {
-                            Debug.Log("counter is holding plate");
-                            player.GetKitchenObject().DestroySelf();
-                        }
-                    }
-                    else if (GetKitchenObject().TryGetPot(out PotKitchenObject potOnCounter))
-                    {
-                        //Debug.Log("counter is holding pot");
-                        // Counter is holding a Pot
-                        if (potOnCounter.TryAddIngredient(player.GetKitchenObject().GetKitchenObjectSO()))
-                        {
-                            player.GetKitchenObject().DestroySelf();
-                        }
-                    }
-                }
-            }
-            else
+            // --- PLAYER HOLDS SOMETHING ELSE ---
+            if (kitchenObjectOnCounter.TryGetPlate(out PlateKitchenObject plateOnCounter))
             {
-                // Player is not carrying anything
-                GetKitchenObject().SetKitchenObjectParent(player);
+                if (playerObject != null && playerObject.GetKitchenObjectSO() != null)
+                {
+                    if (plateOnCounter.TryAddIngredient(playerObject.GetKitchenObjectSO()))
+                    {
+                        playerObject.DestroySelf();
+                    }
+                }
             }
+            else if (kitchenObjectOnCounter.TryGetPot(out PotKitchenObject potOnCounter2))
+            {
+                if (playerObject != null && playerObject.GetKitchenObjectSO() != null)
+                {
+                    if (potOnCounter2.TryAddIngredient(playerObject.GetKitchenObjectSO()))
+                    {
+                        playerObject.DestroySelf();
+                    }
+                }
+            }
+        }
+        else
+        {
+            // --- PLAYER EMPTY-HANDED ---
+            kitchenObjectOnCounter.SetKitchenObjectParent(player);
         }
     }
 }

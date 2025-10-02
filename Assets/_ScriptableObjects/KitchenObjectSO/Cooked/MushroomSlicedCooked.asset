@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: MushroomSlicedCooked
   m_EditorClassIdentifier: 
   prefab: {fileID: 4119054333961309592, guid: 16bc89530a744cf4a835e897c0275116, type: 3}
-  sprite: {fileID: 21300000, guid: a01087ce1455c7e4c8f2410c26afcfd2, type: 3}
+  sprite: {fileID: 21300000, guid: b86554e98062c924d8487c8725a39bc0, type: 3}
   objectName: MushroomSlicedCooked

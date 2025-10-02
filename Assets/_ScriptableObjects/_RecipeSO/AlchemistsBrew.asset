@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ae5e2a31f91699d4b8fa75670ec6c67d, type: 3}
-  m_Name: KnightsFeast
+  m_Name: AlchemistsBrew
   m_EditorClassIdentifier: 
   kitchenObjectSOList:
-  - {fileID: 11400000, guid: add7dba8490d6054592a7cdb12e2a739, type: 2}
-  - {fileID: 11400000, guid: 687b0b00072154a4c9a6cbcf0f41ee9b, type: 2}
   - {fileID: 11400000, guid: 5fa33ac0b50014242981ccd1d746f53f, type: 2}
-  - {fileID: 11400000, guid: e1fa608f8852c6c4fa0da5d810ae05a6, type: 2}
-  recipeName: KnightsFeast
+  - {fileID: 11400000, guid: efd686bb59afca14dab805ed32a7efcd, type: 2}
+  - {fileID: 11400000, guid: ae3faf0c18877d64fa672c7639ecd716, type: 2}
+  - {fileID: 11400000, guid: abdb1f6d88bcb6341a13375e424a95b5, type: 2}
+  recipeName: AlchemistsBrew

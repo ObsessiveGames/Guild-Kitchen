@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ae5e2a31f91699d4b8fa75670ec6c67d, type: 3}
-  m_Name: Mage'sPotion
+  m_Name: DruidSoup
   m_EditorClassIdentifier: 
   kitchenObjectSOList:
-  - {fileID: 11400000, guid: 85ecbffa9d6d67746acc8fbb51cfcf34, type: 2}
   - {fileID: 11400000, guid: 5fa33ac0b50014242981ccd1d746f53f, type: 2}
-  - {fileID: 11400000, guid: ae3faf0c18877d64fa672c7639ecd716, type: 2}
-  recipeName: Mage'sPotion
+  - {fileID: 11400000, guid: efd686bb59afca14dab805ed32a7efcd, type: 2}
+  - {fileID: 11400000, guid: 289b5daa100d9d8429805f1f72f1511a, type: 2}
+  recipeName: DruidSoup

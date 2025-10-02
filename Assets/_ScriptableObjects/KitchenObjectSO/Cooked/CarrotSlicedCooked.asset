@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: CarrotSlicedCooked
   m_EditorClassIdentifier: 
   prefab: {fileID: 4119054333961309592, guid: 90bf03d33a6a57c40a5ff7a6301d223a, type: 3}
-  sprite: {fileID: 21300000, guid: a01087ce1455c7e4c8f2410c26afcfd2, type: 3}
+  sprite: {fileID: 21300000, guid: fb484924be6a94d4c945ce2fc4810394, type: 3}
   objectName: Carrot Slices Cooked

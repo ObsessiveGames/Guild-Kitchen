@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: ChickenLegBurned
   m_EditorClassIdentifier: 
   prefab: {fileID: 4119054333961309592, guid: cf74f32d22ba36646867c9d07c1fa1a6, type: 3}
-  sprite: {fileID: 21300000, guid: a01087ce1455c7e4c8f2410c26afcfd2, type: 3}
+  sprite: {fileID: 21300000, guid: 72d76b0927f77a949afc0150d301fb18, type: 3}
   objectName: ChickenLegBurned

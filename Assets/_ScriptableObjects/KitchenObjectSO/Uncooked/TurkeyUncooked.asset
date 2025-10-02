@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: TurkeyUncooked
   m_EditorClassIdentifier: 
   prefab: {fileID: 5657468385486825505, guid: 5d28a2daa3e300b4a95d30f36142e2f8, type: 3}
-  sprite: {fileID: 21300000, guid: a01087ce1455c7e4c8f2410c26afcfd2, type: 3}
+  sprite: {fileID: 21300000, guid: 3badde7e1e54a7e439afcc3ed3d04728, type: 3}
   objectName: TurkeyUncooked

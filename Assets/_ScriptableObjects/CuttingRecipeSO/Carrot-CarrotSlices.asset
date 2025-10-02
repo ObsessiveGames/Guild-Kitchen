@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 741d0f061f8489849ab4688f07202648, type: 3}
   m_Name: Carrot-CarrotSlices
   m_EditorClassIdentifier: 
-  input: {fileID: 11400000, guid: 368e3e60902d66641910fb24f820be82, type: 2}
+  input: {fileID: 11400000, guid: 46d865345ab2e0c429418f66e34e5472, type: 2}
   output: {fileID: 11400000, guid: 7d11f0bcedc4b06469acca1a0b349f0a, type: 2}
   cuttingProgressMax: 3
