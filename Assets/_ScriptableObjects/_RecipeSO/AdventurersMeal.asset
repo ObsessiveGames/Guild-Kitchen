@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   kitchenObjectSOList:
   - {fileID: 11400000, guid: add7dba8490d6054592a7cdb12e2a739, type: 2}
-  - {fileID: 11400000, guid: 340fb0edb070b0b41b9e174d8b6eebcc, type: 2}
+  - {fileID: 11400000, guid: e0ca1e1f627fd1645a45f44efd25b143, type: 2}
   - {fileID: 11400000, guid: 5fa33ac0b50014242981ccd1d746f53f, type: 2}
   recipeName: AdventurersMeal

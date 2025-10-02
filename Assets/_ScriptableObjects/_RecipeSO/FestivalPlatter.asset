@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: FestivalPlatter
   m_EditorClassIdentifier: 
   kitchenObjectSOList:
-  - {fileID: 11400000, guid: f6979825af29df046819b3ec4cc942a4, type: 2}
-  - {fileID: 11400000, guid: 368e3e60902d66641910fb24f820be82, type: 2}
-  - {fileID: 11400000, guid: 85ecbffa9d6d67746acc8fbb51cfcf34, type: 2}
-  - {fileID: 11400000, guid: 9a1a49be6f5ea7344997e33017e54d77, type: 2}
-  - {fileID: 11400000, guid: 0217741adc25dc040ab6d96b37e3e169, type: 2}
+  - {fileID: 11400000, guid: 5a29cf6b86ae08246b3db9fcf63eeca5, type: 2}
+  - {fileID: 11400000, guid: 289b5daa100d9d8429805f1f72f1511a, type: 2}
+  - {fileID: 11400000, guid: efd686bb59afca14dab805ed32a7efcd, type: 2}
+  - {fileID: 11400000, guid: 1d8c6717fb0dcab429ac804cc3e76965, type: 2}
+  - {fileID: 11400000, guid: e2ea0e86f59f5a34f993414c8754fbd1, type: 2}
   - {fileID: 11400000, guid: ef95ab2968d0dc44b81420a354baa632, type: 2}
   recipeName: FestivalPlatter
