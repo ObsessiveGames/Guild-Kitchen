@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c9a3784d3133924cae2abbd8037d188, type: 3}
   m_Name: OverBrew_BluePotion
   m_EditorClassIdentifier: Assembly-CSharp::OverbrewRecipeSO
-  input: {fileID: 11400000, guid: c4f4789d2f7c70848b0c612073daf193, type: 2}
+  input: {fileID: 11400000, guid: 6afb3e2447af86341aaed143ad7b153c, type: 2}
   output: {fileID: 11400000, guid: 09b63836e4a9f104a97da64a7f1e8fd8, type: 2}
   overbrewTimeMax: 3

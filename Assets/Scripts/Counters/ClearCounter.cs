@@ -39,6 +39,19 @@ public class ClearCounter : BaseCounter
                 return;
             }
 
+            // --- PLAYER HOLDS PAPER BAG ---
+            if (playerObject.TryGetPaperBag(out PaperBagKitchenObject paperBagKitchenObject))
+            {
+                if (kitchenObjectOnCounter != null && kitchenObjectOnCounter.GetKitchenObjectSO() != null)
+                {
+                    if (paperBagKitchenObject.TryAddIngredient(kitchenObjectOnCounter.GetKitchenObjectSO()))
+                    {
+                        kitchenObjectOnCounter.DestroySelf();
+                    }
+                }
+                return;
+            }
+
             // --- PLAYER HOLDS POT ---
             if (playerObject.TryGetPot(out PotKitchenObject potKitchenObject))
             {
@@ -107,6 +120,16 @@ public class ClearCounter : BaseCounter
                 if (playerObject != null && playerObject.GetKitchenObjectSO() != null)
                 {
                     if (potOnCounter2.TryAddIngredient(playerObject.GetKitchenObjectSO()))
+                    {
+                        playerObject.DestroySelf();
+                    }
+                }
+            }
+            else if (kitchenObjectOnCounter.TryGetPaperBag(out PaperBagKitchenObject paperBagOnCounter))
+            {
+                if (playerObject != null && playerObject.GetKitchenObjectSO() != null)
+                {
+                    if (paperBagOnCounter.TryAddIngredient(playerObject.GetKitchenObjectSO()))
                     {
                         playerObject.DestroySelf();
                     }

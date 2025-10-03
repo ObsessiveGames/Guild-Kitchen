@@ -657,7 +657,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4a8c6d2e6e19b74ab882250c00f82c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PotionBurnWarningUI
-  potionCounter: {fileID: 0}
+  potionCounter: {fileID: 6276374622670216548}
 --- !u!1 &7553800248918011502
 GameObject:
   m_ObjectHideFlags: 0
@@ -736,11 +736,17 @@ MonoBehaviour:
   ingredientPlacementPoint: {fileID: 3780542990240950214}
   potionPlacementPoint: {fileID: 2160918380450595391}
   potionRecipeSOArray:
-  - {fileID: 11400000, guid: 4e23defc2a91a984bab6396b64bead98, type: 2}
   - {fileID: 11400000, guid: 8bf5298872408b14ab34b172d79a1979, type: 2}
+  - {fileID: 11400000, guid: 9a7bc7055fa189747b593fafa133efdf, type: 2}
+  - {fileID: 11400000, guid: d5ac29bafa1f9784ca7c4fe10a7fd4bc, type: 2}
+  - {fileID: 11400000, guid: 65c639e12fe0c0d47867f4f2f03b49f8, type: 2}
+  - {fileID: 11400000, guid: 4e23defc2a91a984bab6396b64bead98, type: 2}
   overbrewRecipeSOArray:
-  - {fileID: 11400000, guid: ec5c98112ae8d97448f257eb59fe6bbd, type: 2}
   - {fileID: 11400000, guid: b994561cf035b6446974f4bc45e608f3, type: 2}
+  - {fileID: 11400000, guid: ec5c98112ae8d97448f257eb59fe6bbd, type: 2}
+  - {fileID: 11400000, guid: 8444b533d10653240a0d1c98d7b2aa50, type: 2}
+  - {fileID: 11400000, guid: 77bbf2cdb79567345af6138741e317a0, type: 2}
+  - {fileID: 11400000, guid: e9da541855c31094a927c5d52f2cb1ba, type: 2}
   animator: {fileID: 5571166652497420510}
   failedCookTime: 3
   onomatopoeia: {fileID: 5536619626115726597}

@@ -52,6 +52,11 @@ public class DeliveryManager : MonoBehaviour
         TryDeliverRecipe(bowlKitchenObject.GetKitchenObjectSOList());
     }
 
+    public void DeliverRecipe(PaperBagKitchenObject paperBagKitchenObject)
+    {
+        TryDeliverRecipe(paperBagKitchenObject.GetKitchenObjectSOList());
+    }
+
     private void TryDeliverRecipe(List<KitchenObjectSO> deliveredIngredients)
     {
         for (int i = 0; i < waitingRecipeSOList.Count; i++)

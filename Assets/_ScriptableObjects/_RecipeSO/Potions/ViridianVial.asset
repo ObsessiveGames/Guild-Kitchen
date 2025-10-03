@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae5e2a31f91699d4b8fa75670ec6c67d, type: 3}
+  m_Name: ViridianVial
+  m_EditorClassIdentifier: 
+  kitchenObjectSOList:
+  - {fileID: 11400000, guid: 5fa33ac0b50014242981ccd1d746f53f, type: 2}
+  - {fileID: 11400000, guid: 334b01da6d788734d9d6cda4ab6f6c39, type: 2}
+  - {fileID: 11400000, guid: f6979825af29df046819b3ec4cc942a4, type: 2}
+  - {fileID: 11400000, guid: 7d11f0bcedc4b06469acca1a0b349f0a, type: 2}
+  recipeName: ViridianVial

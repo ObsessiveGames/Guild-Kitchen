@@ -39,15 +39,14 @@ public class KitchenObject : MonoBehaviour
     public void DestroySelf()
     {
         kitchenObjectParent.ClearKitchenObject();
-
         Destroy(gameObject);
     }
 
     public bool TryGetPlate(out PlateKitchenObject plateKitchenObject)
     {
-        if (this is PlateKitchenObject)
+        if (this is PlateKitchenObject plate)
         {
-            plateKitchenObject = this as PlateKitchenObject;
+            plateKitchenObject = plate;
             return true;
         }
         else
@@ -59,9 +58,9 @@ public class KitchenObject : MonoBehaviour
 
     public bool TryGetPot(out PotKitchenObject potKitchenObject)
     {
-        if (this is PotKitchenObject)
+        if (this is PotKitchenObject pot)
         {
-            potKitchenObject = this as PotKitchenObject;
+            potKitchenObject = pot;
             return true;
         }
         else
@@ -85,6 +84,19 @@ public class KitchenObject : MonoBehaviour
         }
     }
 
+    public bool TryGetPaperBag(out PaperBagKitchenObject paperBagKitchenObject)
+    {
+        if (this is PaperBagKitchenObject paperBag)
+        {
+            paperBagKitchenObject = paperBag;
+            return true;
+        }
+        else
+        {
+            paperBagKitchenObject = null;
+            return false;
+        }
+    }
 
     public static KitchenObject SpawnKitchenObject(KitchenObjectSO kitchenObjectSO, IKitchenObjectParent kitchenObjectParent)
     {
