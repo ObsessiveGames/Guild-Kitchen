@@ -13,8 +13,5 @@ MonoBehaviour:
   m_Name: ManaEssence
   m_EditorClassIdentifier: 
   kitchenObjectSOList:
-  - {fileID: 11400000, guid: f6979825af29df046819b3ec4cc942a4, type: 2}
-  - {fileID: 11400000, guid: 804f543e91db70a469b3ebe71fd0c587, type: 2}
-  - {fileID: 11400000, guid: 402252c7c96927049984b25c8e044afd, type: 2}
-  - {fileID: 11400000, guid: ae3faf0c18877d64fa672c7639ecd716, type: 2}
+  - {fileID: 11400000, guid: 6afb3e2447af86341aaed143ad7b153c, type: 2}
   recipeName: ManaEssence

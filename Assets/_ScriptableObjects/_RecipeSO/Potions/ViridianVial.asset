@@ -13,8 +13,5 @@ MonoBehaviour:
   m_Name: ViridianVial
   m_EditorClassIdentifier: 
   kitchenObjectSOList:
-  - {fileID: 11400000, guid: 5fa33ac0b50014242981ccd1d746f53f, type: 2}
-  - {fileID: 11400000, guid: 334b01da6d788734d9d6cda4ab6f6c39, type: 2}
-  - {fileID: 11400000, guid: f6979825af29df046819b3ec4cc942a4, type: 2}
-  - {fileID: 11400000, guid: 7d11f0bcedc4b06469acca1a0b349f0a, type: 2}
+  - {fileID: 11400000, guid: a9cd8e2f152f4e64db5d0de9164c84f6, type: 2}
   recipeName: ViridianVial

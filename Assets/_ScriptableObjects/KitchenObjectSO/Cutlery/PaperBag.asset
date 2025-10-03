@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c884917dbeda9847b195d6a3d812992, type: 3}
   m_Name: PaperBag
   m_EditorClassIdentifier: 
-  prefab: {fileID: 6463910788594160268, guid: 82816363abe2da1418f71bf09fb1253d, type: 3}
+  prefab: {fileID: 8782135038757450640, guid: a89b06b51f4fc8341925c8d177aec9bf, type: 3}
   sprite: {fileID: 21300000, guid: 114b0da55051c094b90c77403aff838e, type: 3}
-  objectName: PotUncooked
+  objectName: PaperBag
