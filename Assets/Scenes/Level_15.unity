@@ -7730,10 +7730,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5925104293223713178, guid: 4be2907aebc8fda47835c1f027f4327d,
+    - target: {fileID: 4912632462179474515, guid: 4be2907aebc8fda47835c1f027f4327d,
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5925104293223713178, guid: 4be2907aebc8fda47835c1f027f4327d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7063410383701335058, guid: 4be2907aebc8fda47835c1f027f4327d,
         type: 3}
@@ -7748,7 +7753,7 @@ PrefabInstance:
     - target: {fileID: 7063410383701335059, guid: 4be2907aebc8fda47835c1f027f4327d,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8165125608175659010, guid: 4be2907aebc8fda47835c1f027f4327d,
         type: 3}
@@ -7764,6 +7769,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0.421
+      objectReference: {fileID: 0}
+    - target: {fileID: 8182765427892551283, guid: 4be2907aebc8fda47835c1f027f4327d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11375,6 +11385,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2478764427181586054, guid: 0f67efed388bcc445beaede94a97f5ed,
+        type: 3}
+      propertyPath: kitchenObjectSO
+      value: 
+      objectReference: {fileID: 11400000, guid: 12fadafd6c5d6d14ca9a770ab075a807,
+        type: 2}
     - target: {fileID: 4332258740270714823, guid: 0f67efed388bcc445beaede94a97f5ed,
         type: 3}
       propertyPath: m_LocalScale.x
